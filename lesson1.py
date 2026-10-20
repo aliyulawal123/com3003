@@ -473,3 +473,4 @@ for country in (c1, c2):
      country.capital()
      country.language()
      country.continent()
+    
