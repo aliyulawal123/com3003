@@ -341,136 +341,245 @@
 # print("My name is {} , I am {} years old, work with {}".format("John", 21, "ebay"))
 
 ##============SESSION 3 AFTERNOON==========
-print("Session 3 afternoon")
+# print("Session 3 afternoon")
 
-class Employee(object):
-    companyName = "Github"
+# class Employee(object):
+#     companyName = "Github"
 
-    def __init__(self, name, id, salary):
+#     def __init__(self, name, id, salary):
 
-        self.name  = name
-        self.id = id
-        #self.__salary = salary   no access/modification
-        self.salary = salary
+#         self.name  = name
+#         self.id = id
+#         #self.__salary = salary   no access/modification
+#         self.salary = salary
 
-    def show(self):
-        print("My name is: ", self.name, "with ID:", self.id,
-               "and salary", self.salary)
+#     def show(self):
+#         print("My name is: ", self.name, "with ID:", self.id,
+#                "and salary", self.salary)
 
-    @staticmethod
-    def department(dpt):
-        print("The employee's department is", dpt)
+#     @staticmethod
+#     def department(dpt):
+#         print("The employee's department is", dpt)
 
-    @classmethod
-    def placeOfWork(cls, name):
-        print("This is the name of the company", Employee.companyName)
-        Employee.companyName = name
-        print("My new place of work is", Employee.companyName)
+#     @classmethod
+#     def placeOfWork(cls, name):
+#         print("This is the name of the company", Employee.companyName)
+#         Employee.companyName = name
+#         print("My new place of work is", Employee.companyName)
 
-    def setDetails(self, id, salary):
-        print("Current salary", self.salary, "Current_ID", self.id)
-        self.id = id
-        self.salary = salary
-        print("New:","Current salary", self.salary, "Current_ID",self.id)
+#     def setDetails(self, id, salary):
+#         print("Current salary", self.salary, "Current_ID", self.id)
+#         self.id = id
+#         self.salary = salary
+#         print("New:","Current salary", self.salary, "Current_ID",self.id)
 
-    def printEmail(self):
-        print("Employee email:", self.name + "@microsoft.com")
+#     def printEmail(self):
+#         print("Employee email:", self.name + "@microsoft.com")
 
 
-emp1 = Employee("JohnDoe", "AB555", 1500)
-emp1.show()
-print("Accessing salary from outside",emp1.salary)
-emp1.department("Accounting")
-emp1.placeOfWork("Microsoft")
-emp1.setDetails("ZZ222", 2000)
-emp1.printEmail()
+# emp1 = Employee("JohnDoe", "AB555", 1500)
+# emp1.show()
+# print("Accessing salary from outside",emp1.salary)
+# emp1.department("Accounting")
+# emp1.placeOfWork("Microsoft")
+# emp1.setDetails("ZZ222", 2000)
+# emp1.printEmail()
 
-class Circle(object):
+# class Circle(object):
 
-    def __init__(self, area, size):
-        self.area = area
-        self.size = size
+#     def __init__(self, area, size):
+#         self.area = area
+#         self.size = size
 
-    def __add__(self, other):
-        return self.area + other.area, self.size + other.size
+#     def __add__(self, other):
+#         return self.area + other.area, self.size + other.size
 
-    def __sub__(self,other):
-        return self.area - other.area
+#     def __sub__(self,other):
+#         return self.area - other.area
 
-    def __truediv__(self,other):
-            return self.area / other.area
+#     def __truediv__(self,other):
+#             return self.area / other.area
 
-    def __lt__(self,other):
-                return self.area < other.area
+#     def __lt__(self,other):
+#                 return self.area < other.area
     
-c1 = Circle(14, "small")
-c2 = Circle(10, "large")
+# c1 = Circle(14, "small")
+# c2 = Circle(10, "large")
 
-print("Area for C1:", c1.area, "Area for C2:", c2.area)
-print("Addition of two circle areas", c1 + c2)
-print("Subtraction of two circle areas", c1 - c2)
-print("Division of two circle areas", c1 / c2)
-print("Two circles comparison", c1 < c2)
+# print("Area for C1:", c1.area, "Area for C2:", c2.area)
+# print("Addition of two circle areas", c1 + c2)
+# print("Subtraction of two circle areas", c1 - c2)
+# print("Division of two circle areas", c1 / c2)
+# print("Two circles comparison", c1 < c2)
 
-class Shark(object):
+# class Shark(object):
 
-    def swim(self):
-        print("The shark is swimming")
+#     def swim(self):
+#         print("The shark is swimming")
 
-    def swimbackwards(self):
-        print("Can't swim backward but can sink backward")
+#     def swimbackwards(self):
+#         print("Can't swim backward but can sink backward")
 
-    def skeleton(self):
-         print("The shark's skeleton is made up cartilage")
+#     def skeleton(self):
+#          print("The shark's skeleton is made up cartilage")
 
 
-class eelfish(object):
+# class eelfish(object):
 
-    def swim(self):
-        print("The eelfish is swimming")
+#     def swim(self):
+#         print("The eelfish is swimming")
 
-    def swimbackwards(self):
-        print("Eelfish can swim backward")
+#     def swimbackwards(self):
+#         print("Eelfish can swim backward")
 
-    def skeleton(self):
-         print("The eelfish's skeleton is made up bones")
+#     def skeleton(self):
+#          print("The eelfish's skeleton is made up bones")
 
-s1 = Shark()
-e1 = eelfish()
+# s1 = Shark()
+# e1 = eelfish()
 
-for fish in (s1, e1):
-     fish.swim()
-     fish.swimbackwards()
-     fish.skeleton()
+# for fish in (s1, e1):
+#      fish.swim()
+#      fish.swimbackwards()
+#      fish.skeleton()
 
-class Nigeria(object):
+# class Nigeria(object):
 
-    def capital(self):
-        print("The capital of Nigeria is Abuja")
+#     def capital(self):
+#         print("The capital of Nigeria is Abuja")
     
-    def language(self):
-        print("English is the official language")
+#     def language(self):
+#         print("English is the official language")
 
-    def continent(self):
-        print("It is in Africa")
+#     def continent(self):
+#         print("It is in Africa")
 
-class France(object):
+# class France(object):
 
-    def capital(self):
-        print("The capital of France is Paris")
+#     def capital(self):
+#         print("The capital of France is Paris")
     
-    def language(self):
-        print("French is the official language")
+#     def language(self):
+#         print("French is the official language")
 
-    def continent(self):
-        print("It is in Europe")
+#     def continent(self):
+#         print("It is in Europe")
 
 
-c1 = Nigeria()
-c2 = France()
+# c1 = Nigeria()
+# c2 = France()
 
-for country in (c1, c2):
-     country.capital()
-     country.language()
-     country.continent()
-#==========SESSION4_FRIDAY=================
+# for country in (c1, c2):
+#      country.capital()
+#      country.language()
+#      country.continent()
+# #==========SESSION4_FRIDAY=================
+print("====SESSION 4 FRIDAY MORNING=====")
+
+class Bird(object):
+    msg2 = "Global variable of Bird's class"
+
+    def fly(self):
+        message =" The bird is flying" #local variable
+        return message
+
+sparrow = Bird()
+print(sparrow.msg2)
+#print(sparrow.message)
+
+class Aircraft(object):
+
+    def __init__(self, name , model, capacity, speed, engine):
+        self.name = name 
+        self.model =model
+        self.capacity = capacity
+        self.speed = speed
+        self.engine = engine
+
+    def fly(self):
+        print("The created aircraft can fly")
+
+    def info(self):
+        print("Make {} and Model {} ".format(self.name, self.model))
+        print("The created aircraft has {} passengers".format(self.capacity))
+        print("Engine Type {} and Speed {}".format(self.engine, self.speed))
+        
+class Civilian(Aircraft):
+
+    def __init__(self, name, model, capacity, speed, engine, wings):
+        super().__init__(name, model, capacity, speed, engine)
+        self.wings = wings
+        
+
+    def passengerSeat(self):
+        print("There are more seats in civilian aircraft")
+        print("Wingspan is {}".format(self.wings))
+
+    def runwayLength(self, length):
+        print("The runway length for {} {} is {} feet".format(self.name,
+              self.model, length))
+
+   
+
+Airbus = Civilian("Airbus", "A380", 800, "1000km/h", "Rolls-Royce", "80m")
+Airbus.fly()
+Airbus.passengerSeat()
+Airbus.info()
+Airbus.runwayLength(7250)
+
+class FighterJet(Aircraft):
+
+    def runwayLength(self, length):
+            print("The runway length for {} {} is {} feet".format(self.name,
+                  self.model, length))
+
+    def stealthMode(self):
+        print("The {} {} can operate in stealth mode".format(self.name,
+            self.model))
+
+
+f16 = FighterJet("F16", "X34R", 2, "2414 km/h", "Turbo")
+f16.runwayLength(2250)
+f16.info()
+f16.stealthMode()
+
+class Radio(object):
+
+    def __init__(self, make, model, channel):
+        self.make = make
+        self.model = model
+        self.channel = channel
+
+    def tuneChannel(self):
+        print("Tuning my radio to BBC")
+
+class Camera(object):
+
+    def __init__(self, name, lens, pixels):
+        self.name = name
+        self.lens = lens
+        self.pixels = pixels
+
+    def snapMethod(self):
+        print("Parent method for snapping")
+
+class cellPhone(Radio, Camera):
+
+    def __init__(self, make, model, channel, name, lens, pixels, year):
+        Radio.__init__(self,make, model, channel)
+        Camera.__init__(self, name, lens, pixels)
+        self.year = year
+
+    def info(self):
+        print("A childclass of Radio and camera")
+        print("Phone Make {}, Model {}, Channel:{}, Camera Name: {} ".
+              format(self.make, self.model, self.channel, self.name))
+        print("The lens:{}, the pixels: {} and the year{}".format(
+            self.lens, self.pixels, self.year
+        ))
+
+
+phone1 = cellPhone("Apple","18 pro", 76.5, "sony", "QLED","4K",2026)
+phone1.snapMethod()
+phone1.tuneChannel()
+phone1.info()
