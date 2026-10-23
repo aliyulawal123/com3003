@@ -474,112 +474,178 @@
 #      country.language()
 #      country.continent()
 # #==========SESSION4_FRIDAY=================
-print("====SESSION 4 FRIDAY MORNING=====")
+# print("====SESSION 4 FRIDAY MORNING=====")
 
-class Bird(object):
-    msg2 = "Global variable of Bird's class"
+# class Bird(object):
+#     msg2 = "Global variable of Bird's class"
 
-    def fly(self):
-        message =" The bird is flying" #local variable
-        return message
+#     def fly(self):
+#         message =" The bird is flying" #local variable
+#         return message
 
-sparrow = Bird()
-print(sparrow.msg2)
-#print(sparrow.message)
+# sparrow = Bird()
+# print(sparrow.msg2)
+# #print(sparrow.message)
 
-class Aircraft(object):
+# class Aircraft(object):
 
-    def __init__(self, name , model, capacity, speed, engine):
-        self.name = name 
-        self.model =model
-        self.capacity = capacity
-        self.speed = speed
-        self.engine = engine
+#     def __init__(self, name , model, capacity, speed, engine):
+#         self.name = name 
+#         self.model =model
+#         self.capacity = capacity
+#         self.speed = speed
+#         self.engine = engine
 
-    def fly(self):
-        print("The created aircraft can fly")
+#     def fly(self):
+#         print("The created aircraft can fly")
 
-    def info(self):
-        print("Make {} and Model {} ".format(self.name, self.model))
-        print("The created aircraft has {} passengers".format(self.capacity))
-        print("Engine Type {} and Speed {}".format(self.engine, self.speed))
+#     def info(self):
+#         print("Make {} and Model {} ".format(self.name, self.model))
+#         print("The created aircraft has {} passengers".format(self.capacity))
+#         print("Engine Type {} and Speed {}".format(self.engine, self.speed))
         
-class Civilian(Aircraft):
+# class Civilian(Aircraft):
 
-    def __init__(self, name, model, capacity, speed, engine, wings):
-        super().__init__(name, model, capacity, speed, engine)
-        self.wings = wings
+#     def __init__(self, name, model, capacity, speed, engine, wings):
+#         super().__init__(name, model, capacity, speed, engine)
+#         self.wings = wings
         
 
-    def passengerSeat(self):
-        print("There are more seats in civilian aircraft")
-        print("Wingspan is {}".format(self.wings))
+#     def passengerSeat(self):
+#         print("There are more seats in civilian aircraft")
+#         print("Wingspan is {}".format(self.wings))
 
-    def runwayLength(self, length):
-        print("The runway length for {} {} is {} feet".format(self.name,
-              self.model, length))
+#     def runwayLength(self, length):
+#         print("The runway length for {} {} is {} feet".format(self.name,
+#               self.model, length))
 
    
 
-Airbus = Civilian("Airbus", "A380", 800, "1000km/h", "Rolls-Royce", "80m")
-Airbus.fly()
-Airbus.passengerSeat()
-Airbus.info()
-Airbus.runwayLength(7250)
+# Airbus = Civilian("Airbus", "A380", 800, "1000km/h", "Rolls-Royce", "80m")
+# Airbus.fly()
+# Airbus.passengerSeat()
+# Airbus.info()
+# Airbus.runwayLength(7250)
 
-class FighterJet(Aircraft):
+# class FighterJet(Aircraft):
 
-    def runwayLength(self, length):
-            print("The runway length for {} {} is {} feet".format(self.name,
-                  self.model, length))
+#     def runwayLength(self, length):
+#             print("The runway length for {} {} is {} feet".format(self.name,
+#                   self.model, length))
 
-    def stealthMode(self):
-        print("The {} {} can operate in stealth mode".format(self.name,
-            self.model))
-
-
-f16 = FighterJet("F16", "X34R", 2, "2414 km/h", "Turbo")
-f16.runwayLength(2250)
-f16.info()
-f16.stealthMode()
-
-class Radio(object):
-
-    def __init__(self, make, model, channel):
-        self.make = make
-        self.model = model
-        self.channel = channel
-
-    def tuneChannel(self):
-        print("Tuning my radio to BBC")
-
-class Camera(object):
-
-    def __init__(self, name, lens, pixels):
-        self.name = name
-        self.lens = lens
-        self.pixels = pixels
-
-    def snapMethod(self):
-        print("Parent method for snapping")
-
-class cellPhone(Radio, Camera):
-
-    def __init__(self, make, model, channel, name, lens, pixels, year):
-        Radio.__init__(self,make, model, channel)
-        Camera.__init__(self, name, lens, pixels)
-        self.year = year
-
-    def info(self):
-        print("A childclass of Radio and camera")
-        print("Phone Make {}, Model {}, Channel:{}, Camera Name: {} ".
-              format(self.make, self.model, self.channel, self.name))
-        print("The lens:{}, the pixels: {} and the year{}".format(
-            self.lens, self.pixels, self.year
-        ))
+#     def stealthMode(self):
+#         print("The {} {} can operate in stealth mode".format(self.name,
+#             self.model))
 
 
-phone1 = cellPhone("Apple","18 pro", 76.5, "sony", "QLED","4K",2026)
-phone1.snapMethod()
-phone1.tuneChannel()
-phone1.info()
+# f16 = FighterJet("F16", "X34R", 2, "2414 km/h", "Turbo")
+# f16.runwayLength(2250)
+# f16.info()
+# f16.stealthMode()
+
+# class Radio(object):
+
+#     def __init__(self, make, model, channel):
+#         self.make = make
+#         self.model = model
+#         self.channel = channel
+
+#     def tuneChannel(self):
+#         print("Tuning my radio to BBC")
+
+# class Camera(object):
+
+#     def __init__(self, name, lens, pixels):
+#         self.name = name
+#         self.lens = lens
+#         self.pixels = pixels
+
+#     def snapMethod(self):
+#         print("Parent method for snapping")
+
+# class cellPhone(Radio, Camera):
+
+#     def __init__(self, make, model, channel, name, lens, pixels, year):
+#         Radio.__init__(self,make, model, channel)
+#         Camera.__init__(self, name, lens, pixels)
+#         self.year = year
+
+#     def info(self):
+#         print("A childclass of Radio and camera")
+#         print("Phone Make {}, Model {}, Channel:{}, Camera Name: {} ".
+#               format(self.make, self.model, self.channel, self.name))
+#         print("The lens:{}, the pixels: {} and the year{}".format(
+#             self.lens, self.pixels, self.year
+#         ))
+
+
+# phone1 = cellPhone("Apple","18 pro", 76.5, "sony", "QLED","4K",2026)
+# phone1.snapMethod()
+# phone1.tuneChannel()
+# phone1.info()
+
+# #===========Afternoon Session 4==
+print("Session 4 Afternoon Friday")
+
+horses = 33
+print(horses /12, "&&" , type(horses//12))
+print((1+3)**(5-2), (59*60) / 100)  
+
+a = 1
+b =2
+c = a + b  #ans3
+c = c+ 2    #ans5
+c += 2
+print("testiung +=",c)#7
+c-= 2
+print("testing -=", c)#5
+c/=2
+print("testing div-equal",c)#2.5
+c*=2
+print("testing *=", c)
+c**=2
+print("testing **=", c)
+
+print("is a greater than b:",a > b)
+
+e = "hello "
+e+= "world"
+
+print("This is testing string e", e)
+
+print("is a lessthan b:",a < b)
+print(" a not equal to b:",a !=b)
+print("is a greater than or equal to b:",a >= b)
+print("is a lessthan or equal b:",a <= b)
+print("is a equal to b in value and type:",a == b)
+
+a = 2; b=4
+
+if (a<0) or (b>0):
+    print("Boolean Comparison", a * b)
+else:
+    print("Something is off")
+
+print(10 and 20)
+
+print("Testing Not", not a)
+
+a = 10
+b = 20
+numlist = [1, 2, 3, 4, 5, 20]
+
+if (a not in numlist):
+    print(a, "is contained in this list")
+else:
+    print("NOT CONTAINED")
+
+x = 10
+y= 11
+z = 10
+print("X position in CPU memory", id(x))
+print("Y position in CPU Memory", id(y))
+print("Checking for IS", x is y)
+print("Checking or x and z", x is z)
+
+print("CHecking for IS NOT", x is not y)
+print("Checking for IS NOT", x is not z)
