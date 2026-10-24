@@ -66,6 +66,7 @@ class LibrarySystem:
         self.name = "Greenwood Community"
         self.available_books = {}
         self.borrowed_books = {}
+
     def add_book(self, book_id, title, author):
         if book_id in self.available_books:
             print("Book ID already exists.")
@@ -75,18 +76,21 @@ class LibrarySystem:
             "author": author
         }
         print(f"'{title}' added successfully.")
+
     def borrow_book(self, book_id):
         if book_id not in self.available_books:
             print("Book not available.")
             return
         self.borrowed_books[book_id] = self.available_books.pop(book_id)
         print(f"Book ID {book_id} borrowed successfully.")
+
     def return_book(self, book_id):
         if book_id not in self.borrowed_books:
             print("This book was not borrowed.")
             return
         self.available_books[book_id] = self.borrowed_books.pop(book_id)
         print(f"Book ID {book_id} returned successfully.")
+
     def show_available_books(self):
         print("\nAvailable Books")
         for book_id, details in self.available_books.items():
@@ -95,6 +99,7 @@ class LibrarySystem:
                 f"{details['title']} | "
                 f"{details['author']}"
             )
+            
     def show_borrowed_books(self):
         print("\nBorrowed Books")
         for book_id, details in self.borrowed_books.items():
