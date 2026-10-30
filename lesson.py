@@ -761,8 +761,7 @@ while True:
     elif choice == "7":
         phone = input("Enter your phone number")
         u2.PhoneNumber(phone)
-
-
+        
     else:
         print("Thanks for uisng our Bank")
         exit()
