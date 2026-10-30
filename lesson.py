@@ -585,67 +585,214 @@
 # phone1.info()
 
 # #===========Afternoon Session 4==
-print("Session 4 Afternoon Friday")
+# print("Session 4 Afternoon Friday")
 
-horses = 33
-print(horses /12, "&&" , type(horses//12))
-print((1+3)**(5-2), (59*60) / 100)  
+# horses = 33
+# print(horses /12, "&&" , type(horses//12))
+# print((1+3)**(5-2), (59*60) / 100)  
 
-a = 1
-b =2
-c = a + b  #ans3
-c = c+ 2    #ans5
-c += 2
-print("testiung +=",c)#7
-c-= 2
-print("testing -=", c)#5
-c/=2
-print("testing div-equal",c)#2.5
-c*=2
-print("testing *=", c)
-c**=2
-print("testing **=", c)
+# a = 1
+# b =2
+# c = a + b  #ans3
+# c = c+ 2    #ans5
+# c += 2
+# print("testiung +=",c)#7
+# c-= 2
+# print("testing -=", c)#5
+# c/=2
+# print("testing div-equal",c)#2.5
+# c*=2
+# print("testing *=", c)
+# c**=2
+# print("testing **=", c)
 
-print("is a greater than b:",a > b)
+# print("is a greater than b:",a > b)
 
-e = "hello "
-e+= "world"
+# e = "hello "
+# e+= "world"
 
-print("This is testing string e", e)
+# print("This is testing string e", e)
 
-print("is a lessthan b:",a < b)
-print(" a not equal to b:",a !=b)
-print("is a greater than or equal to b:",a >= b)
-print("is a lessthan or equal b:",a <= b)
-print("is a equal to b in value and type:",a == b)
+# print("is a lessthan b:",a < b)
+# print(" a not equal to b:",a !=b)
+# print("is a greater than or equal to b:",a >= b)
+# print("is a lessthan or equal b:",a <= b)
+# print("is a equal to b in value and type:",a == b)
 
-a = 2; b=4
+# a = 2; b=4
 
-if (a<0) or (b>0):
-    print("Boolean Comparison", a * b)
-else:
-    print("Something is off")
+# if (a<0) or (b>0):
+#     print("Boolean Comparison", a * b)
+# else:
+#     print("Something is off")
 
-print(10 and 20)
+# print(10 and 20)
 
-print("Testing Not", not a)
+# print("Testing Not", not a)
 
-a = 10
-b = 20
-numlist = [1, 2, 3, 4, 5, 20]
+# a = 10
+# b = 20
+# numlist = [1, 2, 3, 4, 5, 20]
 
-if (a not in numlist):
-    print(a, "is contained in this list")
-else:
-    print("NOT CONTAINED")
+# if (a not in numlist):
+#     print(a, "is contained in this list")
+# else:
+#     print("NOT CONTAINED")
 
-x = 10
-y= 11
-z = 10
-print("X position in CPU memory", id(x))
-print("Y position in CPU Memory", id(y))
-print("Checking for IS", x is y)
-print("Checking or x and z", x is z)
+# x = 10
+# y= 11
+# z = 10
+# print("X position in CPU memory", id(x))
+# print("Y position in CPU Memory", id(y))
+# print("Checking for IS", x is y)
+# print("Checking or x and z", x is z)
 
-print("CHecking for IS NOT", x is not y)
-print("Checking for IS NOT", x is not z)
+# print("CHecking for IS NOT", x is not y)
+# print("Checking for IS NOT", x is not z)
+#======Week 5 Session 1 Morning=================
+print("hello world")
+
+class BankAccount(object):
+    #init class
+    def __init__(self, name, acct_no, sort_code, balance):
+        self.name = name
+        self.acct_no = acct_no
+        self.sort_code = sort_code
+        self.balance = balance
+
+    #deposit method
+    def deposit(self, amt):
+        print("The current balance is", self.balance)
+        print("I have deposited {} in my account".format(amt))
+        self.balance = self.balance + amt
+        print("My new account balance is", self.balance)
+
+
+    def withdraw(self, amt):
+        if self.balance - amt <= 0:
+            print("Insufficient balance")
+            print("Add credits to withdraw")
+
+        else:    
+            print("The current balance is ", self.balance)
+            print("I am wihtdrawing {} from my acct".format(amt))
+            self.balance = self.balance - amt
+            print("My new balance", self.balance)
+
+    def getBalance(self):
+        print("Checking my Balance ", self.balance)
+
+    def info(self):
+        print(" The account holder is", self.name)
+        print("Their acct no {} and sort code {}".format
+              (self.acct_no, self.sort_code))
+        print("The account balance is: ", self.balance)
+
+    def creatATM(self):
+        print("Card number: 1234 5678 9101 2131")
+        print("EXP MM {} YYYY {}".format(10, 2030))
+        print("CVV 345")
+        print("Name", self.name)
+
+    def regAddress(self, addr):
+        print("Current address is:", addr )
+
+    def PhoneNumber(self, num):
+        print("My phone number is", num)
+
+u1 = BankAccount("John Doe", 123456, "01-01-01", 0)
+print("========Running Acct Deposit====")
+u1.deposit(50)
+print("======Running the debit function===")
+u1.withdraw(40)
+print("====Running the balance====")
+u1.getBalance()
+print("=====Info method=========")
+u1.info()
+print("====Creating ATM CARD")
+u1.creatATM()
+print("===Register Address====")
+u1.regAddress("1 Travelyn Square Leeds LS1 1CX")
+print("==Your Phone  Number=")
+u1.PhoneNumber(11123434)
+
+print("===BUILDING A PROMPT FOR THE BANK ACCOUNT")
+
+name = input("Enter Your Name: ")
+acct_no = input("Enter your Account Number: ")
+sort_code = input("Enter your sort code: ")
+balance = float(input("Enter your balance: £"))
+u2 = BankAccount(name, acct_no, sort_code, balance)
+
+while True:
+    print("\n ====== BANK MENU====")
+    print("1. Depoist")
+    print("2. Withdraw")
+    print("3. Check Balance")
+    print("4. Account Info")
+    print("5. Create ATM Card")
+    print("6. Register Address")
+    print("7. Register Phone Number")
+    print("8. Exit")
+
+    choice = input("Choose an option (1-8): ")
+
+    if choice == "1":
+        amount = int(input("Enter Deposit Amount: £"))
+        u2.deposit(amount)
+
+    elif choice == "2":
+        amount = int(input("Enter withdraw amount: £"))
+        u2.withdraw(amount)
+
+    elif choice == "3":
+        u2.getBalance()
+
+    elif choice == "4":
+        u2.info()
+
+    elif choice == "5":
+        u2.creatATM()
+
+    elif choice == "6":
+        addr = input("Enter your address")
+        u2.regAddress(addr)
+
+    elif choice == "7":
+        phone = input("Enter your phone number")
+        u2.PhoneNumber(phone)
+
+
+    else:
+        print("Thanks for uisng our Bank")
+        exit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# print("=====BANK ACCT PROMPT=====")
+# name = input("Enter Customer Name")
+# acct = input("Enter Acct Number")
+# sort_code = input("Enter Sort Code")
+# balance = float(input("Your balance"))
+# u2 = BankAccount(name, acct, sort_code, balance)
