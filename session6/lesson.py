@@ -650,132 +650,341 @@
 # print("CHecking for IS NOT", x is not y)
 # print("Checking for IS NOT", x is not z)
 #======Week 5 Session 1 Morning=================
-print("hello world")
+# print("hello world")
 
-class BankAccount(object):
-    #init class
-    def __init__(self, name, acct_no, sort_code, balance):
-        self.name = name
-        self.acct_no = acct_no
-        self.sort_code = sort_code
-        self.balance = balance
+# class BankAccount(object):
+#     #init class
+#     def __init__(self, name, acct_no, sort_code, balance):
+#         self.name = name
+#         self.acct_no = acct_no
+#         self.sort_code = sort_code
+#         self.balance = balance
 
-    #deposit method
-    def deposit(self, amt):
-        print("The current balance is", self.balance)
-        print("I have deposited {} in my account".format(amt))
-        self.balance = self.balance + amt
-        print("My new account balance is", self.balance)
+#     #deposit method
+#     def deposit(self, amt):
+#         print("The current balance is", self.balance)
+#         print("I have deposited {} in my account".format(amt))
+#         self.balance = self.balance + amt
+#         print("My new account balance is", self.balance)
 
 
-    def withdraw(self, amt):
-        if self.balance - amt <= 0:
-            print("Insufficient balance")
-            print("Add credits to withdraw")
+#     def withdraw(self, amt):
+#         if self.balance - amt <= 0:
+#             print("Insufficient balance")
+#             print("Add credits to withdraw")
 
-        else:    
-            print("The current balance is ", self.balance)
-            print("I am wihtdrawing {} from my acct".format(amt))
-            self.balance = self.balance - amt
-            print("My new balance", self.balance)
+#         else:    
+#             print("The current balance is ", self.balance)
+#             print("I am wihtdrawing {} from my acct".format(amt))
+#             self.balance = self.balance - amt
+#             print("My new balance", self.balance)
 
-    def getBalance(self):
-        print("Checking my Balance ", self.balance)
+#     def getBalance(self):
+#         print("Checking my Balance ", self.balance)
 
-    def info(self):
-        print(" The account holder is", self.name)
-        print("Their acct no {} and sort code {}".format
-              (self.acct_no, self.sort_code))
-        print("The account balance is: ", self.balance)
+#     def info(self):
+#         print(" The account holder is", self.name)
+#         print("Their acct no {} and sort code {}".format
+#               (self.acct_no, self.sort_code))
+#         print("The account balance is: ", self.balance)
 
-    def creatATM(self):
-        print("Card number: 1234 5678 9101 2131")
-        print("EXP MM {} YYYY {}".format(10, 2030))
-        print("CVV 345")
-        print("Name", self.name)
+#     def creatATM(self):
+#         print("Card number: 1234 5678 9101 2131")
+#         print("EXP MM {} YYYY {}".format(10, 2030))
+#         print("CVV 345")
+#         print("Name", self.name)
 
-    def regAddress(self, addr):
-        print("Current address is:", addr )
+#     def regAddress(self, addr):
+#         print("Current address is:", addr )
 
-    def PhoneNumber(self, num):
-        print("My phone number is", num)
+#     def PhoneNumber(self, num):
+#         print("My phone number is", num)
 
-u1 = BankAccount("John Doe", 123456, "01-01-01", 0)
-print("========Running Acct Deposit====")
-u1.deposit(50)
-print("======Running the debit function===")
-u1.withdraw(40)
-print("====Running the balance====")
-u1.getBalance()
-print("=====Info method=========")
-u1.info()
-print("====Creating ATM CARD")
-u1.creatATM()
-print("===Register Address====")
-u1.regAddress("1 Travelyn Square Leeds LS1 1CX")
-print("==Your Phone  Number=")
-u1.PhoneNumber(11123434)
+# u1 = BankAccount("John Doe", 123456, "01-01-01", 0)
+# print("========Running Acct Deposit====")
+# u1.deposit(50)
+# print("======Running the debit function===")
+# u1.withdraw(40)
+# print("====Running the balance====")
+# u1.getBalance()
+# print("=====Info method=========")
+# u1.info()
+# print("====Creating ATM CARD")
+# u1.creatATM()
+# print("===Register Address====")
+# u1.regAddress("1 Travelyn Square Leeds LS1 1CX")
+# print("==Your Phone  Number=")
+# u1.PhoneNumber(11123434)
 
-print("===BUILDING A PROMPT FOR THE BANK ACCOUNT")
+# print("===BUILDING A PROMPT FOR THE BANK ACCOUNT")
 
-name = input("Enter Your Name: ")
-acct_no = input("Enter your Account Number: ")
-sort_code = input("Enter your sort code: ")
-balance = float(input("Enter your balance: £"))
-u2 = BankAccount(name, acct_no, sort_code, balance)
+# name = input("Enter Your Name: ")
+# acct_no = input("Enter your Account Number: ")
+# sort_code = input("Enter your sort code: ")
+# balance = float(input("Enter your balance: £"))
+# u2 = BankAccount(name, acct_no, sort_code, balance)
 
-while True:
-    print("\n ====== BANK MENU====")
-    print("1. Depoist")
-    print("2. Withdraw")
-    print("3. Check Balance")
-    print("4. Account Info")
-    print("5. Create ATM Card")
-    print("6. Register Address")
-    print("7. Register Phone Number")
-    print("8. Exit")
+# while True:
+#     print("\n ====== BANK MENU====")
+#     print("1. Depoist")
+#     print("2. Withdraw")
+#     print("3. Check Balance")
+#     print("4. Account Info")
+#     print("5. Create ATM Card")
+#     print("6. Register Address")
+#     print("7. Register Phone Number")
+#     print("8. Exit")
 
-    choice = input("Choose an option (1-8): ")
+#     choice = input("Choose an option (1-8): ")
 
-    if choice == "1":
-        amount = int(input("Enter Deposit Amount: £"))
-        u2.deposit(amount)
+#     if choice == "1":
+#         amount = int(input("Enter Deposit Amount: £"))
+#         u2.deposit(amount)
 
-    elif choice == "2":
-        amount = int(input("Enter withdraw amount: £"))
-        u2.withdraw(amount)
+#     elif choice == "2":
+#         amount = int(input("Enter withdraw amount: £"))
+#         u2.withdraw(amount)
 
-    elif choice == "3":
-        u2.getBalance()
+#     elif choice == "3":
+#         u2.getBalance()
 
-    elif choice == "4":
-        u2.info()
+#     elif choice == "4":
+#         u2.info()
 
-    elif choice == "5":
-        u2.creatATM()
+#     elif choice == "5":
+#         u2.creatATM()
 
-    elif choice == "6":
-        addr = input("Enter your address")
-        u2.regAddress(addr)
+#     elif choice == "6":
+#         addr = input("Enter your address")
+#         u2.regAddress(addr)
 
-    elif choice == "7":
-        phone = input("Enter your phone number")
-        u2.PhoneNumber(phone)
+#     elif choice == "7":
+#         phone = input("Enter your phone number")
+#         u2.PhoneNumber(phone)
         
-    else:
-        print("Thanks for uisng our Bank")
-        exit()
+#     else:
+#         print("Thanks for uisng our Bank")
+#         exit()
+
+# Week 6 Session1
+print(" =========WEEK6 SESSION 1 =============1")
+
+import os
+
+print("The current folder of my python code: ", os.getcwd())
+print("The POSIX interface for intercom:", os.name)
+print("List of files in this folder: ", os.listdir() )
+print("List of files in this folder: ", os.listdir('/') )
+print("The current process ID: ", os.getpid())
+#print("Creating a new folder:", os.mkdir("C:/Users/aws.admin/" \
+#"Documents/com3003/session7"))
+print("=========MATHS PLOT SECTION==")
+
+import matplotlib.pyplot as plt
 
 
+department = ["HR", "IT", "Sales", "Finance"]
+employees =  [ 10,   25,     15,     12    ]
+
+plt.bar(department, employees, color="red")
+plt.xlabel("Departments")
+plt.ylabel("Employees")
+plt.title("Employee distribution by departments")
 
 
+#plt.show()
 
 
+ages = [22, 25, 30, 30, 31, 34, 35, 36, 40, 41, 42, 45, 46, 50, 51, 52]
+
+plt.hist(ages, bins=5, color='lightgreen', edgecolor='black')
+
+plt.xlabel('Age Range')
+plt.ylabel('Frequency')
+plt.title('Age Distribution')
+#plt.show()
+
+# Sample data​
+departments = ['HR', 'IT', 'Sales', 'Finance']
+sizes = [10, 25, 15, 12]
+colors = ['gold', 'skyblue', 'lightgreen', 'lightcoral']
+# Create pie chart​
+plt.pie(sizes, labels=departments, colors=colors, autopct='%1.1f%%', startangle=90)
+# Equal aspect ratio ensures pie is drawn as a circle​
+plt.axis('equal')
+plt.title('Employee Percentage by Department')
+# Show chart​
+#plt.show()
+
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+plt.subplot(2, 2, 1)
+plt.bar(x, y)
+plt.title("Bar Chart")
+plt.subplot(2, 2, 2)
+plt.hist(y)
+plt.title("Histogram")
+#PART 2​
+plt.subplot(2, 2, 3)
+plt.pie(y, labels=x)
+plt.title("Pie Chart")
+plt.subplot(2, 2, 4)
+plt.plot(x, y, marker='o')
+plt.title("Line Graph")
+plt.tight_layout()
+#plt.show()
+
+mynum =[2,3,4,5,6,7,8,9,12]
+print(sum(mynum, 10))
+
+def addition(n):
+    return n + n
+
+iter = [1,2,3,4]
+
+result = map(addition, iter)
+print(list(result))
+
+import turtle
+
+screensize = turtle.getscreen()
+
+oogway = turtle.Turtle()
+oogway.pensize(6)
+
+# oogway.right(90)
+# oogway.forward(130)
+# oogway.left(60)
+# oogway.back(100)
+oogway.color("light green")
+
+#oogway.goto(100,100)
 
 
+# oogway.fd(100)
+# oogway.rt(90)
+# oogway.fd(100)
+# oogway.rt(90)
+# oogway.fd(100)
+# oogway.rt(90)
+# oogway.fd(100)
+
+# oogway.circle(60)
+# oogway.dot(60)
+
+# for steps in range(100):
+#     for c in ('blue', 'red', 'green'):
+#         oogway.color(c)
+#         oogway.forward(steps)
+#         oogway.right(30)
 
 
+# for i in range(50):
+#     oogway.forward(50)
+#     oogway.right(144)
 
+# colors = ['red', 'purple', 'blue', 'green', 'darkolivegreen', 'darksalmon']
+
+# t = turtle.Pen()
+# turtle.bgcolor('black')
+# for x in range(360):
+#   t.pencolor(colors[x%6])
+#   t.width(x/100 + 1)
+#   t.forward(x)
+#   t.left(59)
+
+
+# my_wn = turtle.Screen()
+
+# turtle.speed(2)
+# for i in range(30):
+#     turtle.circle(5*i)
+#     turtle.color("red")
+#     turtle.circle(-5*i)
+#     turtle.color("blue")
+#     turtle.left(i)
+
+import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("lightblue")
+
+oogway = turtle.Turtle()
+oogway.speed(5)
+oogway.pensize(3)
+
+# Draw house base (square)
+oogway.fillcolor("burlywood")
+oogway.begin_fill()
+
+for _ in range(4):
+    oogway.forward(150)
+    oogway.left(90)
+
+oogway.end_fill()
+
+# Move to roof start
+oogway.left(45)
+
+# Draw roof
+oogway.fillcolor("firebrick")
+oogway.begin_fill()
+
+for _ in range(2):
+    oogway.forward(106)
+    oogway.left(90)
+
+oogway.forward(150)
+oogway.left(90)
+
+oogway.end_fill()
+
+# Draw door
+oogway.penup()
+oogway.goto(55, 0)
+oogway.pendown()
+
+oogway.fillcolor("saddlebrown")
+oogway.begin_fill()
+
+for _ in range(2):
+    oogway.forward(40)
+    oogway.left(90)
+    oogway.forward(70)
+    oogway.left(90)
+
+oogway.end_fill()
+
+# Draw left window
+oogway.penup()
+oogway.goto(20, 80)
+oogway.pendown()
+
+oogway.fillcolor("lightyellow")
+oogway.begin_fill()
+
+for _ in range(4):
+    oogway.forward(30)
+    oogway.left(90)
+
+oogway.end_fill()
+
+# Draw right window
+oogway.penup()
+oogway.goto(100, 80)
+oogway.pendown()
+
+oogway.begin_fill()
+
+for _ in range(4):
+    oogway.forward(30)
+    oogway.left(90)
+
+oogway.end_fill()
+
+turtle.done()
+
+turtle.mainloop()
 
 
 
