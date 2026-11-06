@@ -767,96 +767,96 @@
 #         exit()
 
 # Week 6 Session1
-print(" =========WEEK6 SESSION 1 =============1")
+# print(" =========WEEK6 SESSION 1 =============1")
 
-import os
+# import os
 
-print("The current folder of my python code: ", os.getcwd())
-print("The POSIX interface for intercom:", os.name)
-print("List of files in this folder: ", os.listdir() )
-print("List of files in this folder: ", os.listdir('/') )
-print("The current process ID: ", os.getpid())
-#print("Creating a new folder:", os.mkdir("C:/Users/aws.admin/" \
-#"Documents/com3003/session7"))
-print("=========MATHS PLOT SECTION==")
+# print("The current folder of my python code: ", os.getcwd())
+# print("The POSIX interface for intercom:", os.name)
+# print("List of files in this folder: ", os.listdir() )
+# print("List of files in this folder: ", os.listdir('/') )
+# print("The current process ID: ", os.getpid())
+# #print("Creating a new folder:", os.mkdir("C:/Users/aws.admin/" \
+# #"Documents/com3003/session7"))
+# print("=========MATHS PLOT SECTION==")
 
-import matplotlib.pyplot as plt
-
-
-department = ["HR", "IT", "Sales", "Finance"]
-employees =  [ 10,   25,     15,     12    ]
-
-plt.bar(department, employees, color="red")
-plt.xlabel("Departments")
-plt.ylabel("Employees")
-plt.title("Employee distribution by departments")
+# import matplotlib.pyplot as plt
 
 
+# department = ["HR", "IT", "Sales", "Finance"]
+# employees =  [ 10,   25,     15,     12    ]
+
+# plt.bar(department, employees, color="red")
+# plt.xlabel("Departments")
+# plt.ylabel("Employees")
+# plt.title("Employee distribution by departments")
+
+
+# #plt.show()
+
+
+# ages = [22, 25, 30, 30, 31, 34, 35, 36, 40, 41, 42, 45, 46, 50, 51, 52]
+
+# plt.hist(ages, bins=5, color='lightgreen', edgecolor='black')
+
+# plt.xlabel('Age Range')
+# plt.ylabel('Frequency')
+# plt.title('Age Distribution')
+# #plt.show()
+
+# # Sample data​
+# departments = ['HR', 'IT', 'Sales', 'Finance']
+# sizes = [10, 25, 15, 12]
+# colors = ['gold', 'skyblue', 'lightgreen', 'lightcoral']
+# # Create pie chart​
+# plt.pie(sizes, labels=departments, colors=colors, autopct='%1.1f%%', startangle=90)
+# # Equal aspect ratio ensures pie is drawn as a circle​
+# plt.axis('equal')
+# plt.title('Employee Percentage by Department')
+# # Show chart​
 #plt.show()
 
-
-ages = [22, 25, 30, 30, 31, 34, 35, 36, 40, 41, 42, 45, 46, 50, 51, 52]
-
-plt.hist(ages, bins=5, color='lightgreen', edgecolor='black')
-
-plt.xlabel('Age Range')
-plt.ylabel('Frequency')
-plt.title('Age Distribution')
+# x = [1, 2, 3, 4, 5]
+# y = [2, 4, 6, 8, 10]
+# plt.subplot(2, 2, 1)
+# plt.bar(x, y)
+# plt.title("Bar Chart")
+# plt.subplot(2, 2, 2)
+# plt.hist(y)
+# plt.title("Histogram")
+# #PART 2​
+# plt.subplot(2, 2, 3)
+# plt.pie(y, labels=x)
+# plt.title("Pie Chart")
+# plt.subplot(2, 2, 4)
+# plt.plot(x, y, marker='o')
+# plt.title("Line Graph")
+# plt.tight_layout()
 #plt.show()
 
-# Sample data​
-departments = ['HR', 'IT', 'Sales', 'Finance']
-sizes = [10, 25, 15, 12]
-colors = ['gold', 'skyblue', 'lightgreen', 'lightcoral']
-# Create pie chart​
-plt.pie(sizes, labels=departments, colors=colors, autopct='%1.1f%%', startangle=90)
-# Equal aspect ratio ensures pie is drawn as a circle​
-plt.axis('equal')
-plt.title('Employee Percentage by Department')
-# Show chart​
-#plt.show()
+# mynum =[2,3,4,5,6,7,8,9,12]
+# print(sum(mynum, 10))
 
-x = [1, 2, 3, 4, 5]
-y = [2, 4, 6, 8, 10]
-plt.subplot(2, 2, 1)
-plt.bar(x, y)
-plt.title("Bar Chart")
-plt.subplot(2, 2, 2)
-plt.hist(y)
-plt.title("Histogram")
-#PART 2​
-plt.subplot(2, 2, 3)
-plt.pie(y, labels=x)
-plt.title("Pie Chart")
-plt.subplot(2, 2, 4)
-plt.plot(x, y, marker='o')
-plt.title("Line Graph")
-plt.tight_layout()
-#plt.show()
+# def addition(n):
+#     return n + n
 
-mynum =[2,3,4,5,6,7,8,9,12]
-print(sum(mynum, 10))
+# iter = [1,2,3,4]
 
-def addition(n):
-    return n + n
+# result = map(addition, iter)
+# print(list(result))
 
-iter = [1,2,3,4]
+# import turtle
 
-result = map(addition, iter)
-print(list(result))
+# screensize = turtle.getscreen()
 
-import turtle
-
-screensize = turtle.getscreen()
-
-oogway = turtle.Turtle()
-oogway.pensize(6)
+# oogway = turtle.Turtle()
+# oogway.pensize(6)
 
 # oogway.right(90)
 # oogway.forward(130)
 # oogway.left(60)
 # oogway.back(100)
-oogway.color("light green")
+#oogway.color("light green")
 
 #oogway.goto(100,100)
 
@@ -903,104 +903,133 @@ oogway.color("light green")
 #     turtle.circle(-5*i)
 #     turtle.color("blue")
 #     turtle.left(i)
+#turtle.mainloop()
 
-import turtle
 
-screen = turtle.Screen()
-screen.bgcolor("lightblue")
+#=======WEEK 6 AFTERNOON SESSION
+print("Week 6 Afternoon")
 
-oogway = turtle.Turtle()
-oogway.speed(5)
-oogway.pensize(3)
+import random 
 
-# Draw house base (square)
-oogway.fillcolor("burlywood")
-oogway.begin_fill()
+mylist = ["banana", "orange", "apple"]
+print(random.choice(mylist))
 
-for _ in range(4):
-    oogway.forward(150)
-    oogway.left(90)
+from random import choice
 
-oogway.end_fill()
+classics = [ "Pyramid", "Taj mahal", "China wall", "Colosseum", "Machu Picchu"]
 
-# Move to roof start
-oogway.left(45)
+print("Next year we are going to: ",choice(classics))
 
-# Draw roof
-oogway.fillcolor("firebrick")
-oogway.begin_fill()
+Car= ["Ford", "BMW", "Toyota", "Mercedes-Benz", "Audi", "Puegout", "VW"]
 
-for _ in range(2):
-    oogway.forward(106)
-    oogway.left(90)
+def pick(): 
+    import random   
+    print("My favourite car brand: ", random.choice(Car))
 
-oogway.forward(150)
-oogway.left(90)
+pick()
 
-oogway.end_fill()
+print("Random float between two nums:", random.uniform(3,10))
+print("testing for randrange", random.randrange(0,100,25))
+print(random.sample([10, 20, 30, 40, 50,6,5,6], k=2))
 
-# Draw door
-oogway.penup()
-oogway.goto(55, 0)
-oogway.pendown()
 
-oogway.fillcolor("saddlebrown")
-oogway.begin_fill()
+from random import choice
 
-for _ in range(2):
-    oogway.forward(40)
-    oogway.left(90)
-    oogway.forward(70)
-    oogway.left(90)
+places = [ "Abidjan", "Berlin", "Tokyo",    "Leeds", "Taipea", "Greenland"]
+def pickLocation():
+   return choice(places)
 
-oogway.end_fill()
+import re
 
-# Draw left window
-oogway.penup()
-oogway.goto(20, 80)
-oogway.pendown()
-
-oogway.fillcolor("lightyellow")
-oogway.begin_fill()
-
-for _ in range(4):
-    oogway.forward(30)
-    oogway.left(90)
-
-oogway.end_fill()
-
-# Draw right window
-oogway.penup()
-oogway.goto(100, 80)
-oogway.pendown()
-
-oogway.begin_fill()
-
-for _ in range(4):
-    oogway.forward(30)
-    oogway.left(90)
-
-oogway.end_fill()
-
-turtle.done()
-
-turtle.mainloop()
+word  = "Possibility"
+r = re.findall("s", word)
+print("Number of s in the word: ", word, r)
 
 
 
+str2 = "Hello #Raza!@#$%" 
+print(re.findall(r'\W', str2)) 
+print("How many non alpha-numeric cxts", len(re.findall(r'\W', str2)))
+# Output [' ', '#', '!', '@', '#', '$', '%']​
+
+target_str = "My student number is 223455"
+res = re.findall(r"\d", target_str)   #(r"\d+", target_str)​
+
+# extract matching value​
+
+print(res)
+
+str1 = "My name is jackson and my salary is 1000$"
+print("str1 length: ", len(str1))
+result = re.fullmatch(r".{41}", str1)
+# print entire match object​
+
+print(result)
+
+str1 = "Emma  was born on 12 25" 
+# Match any character ​
+print(re.match(r'.', str1)) # output 'E'
+
+target_string = "Kai is a baseball player born on June 17, 2003" 
+# Using search() ​
+
+result = re.search(r'\d{2}', target_string)
+print(result.group()) 
 
 
+target_string = "The post code is LS18 5HD"
+res = re.split(r"\s", target_string)
+print("All tokens:", res)
+res = re.sub(r"\s", "-", target_string)
+ # string after replacement: ​
+print(res) 
+
+import calendar
+
+print("This is a leap year: ", calendar.isleap(2024))
+
+yy =  2026
+mm = 11
+
+print(calendar.month(yy, mm))
+print(calendar.calendar(2026))
+
+from datetime import date
+
+halloween = date(2026, 10, 31)
+
+getYear =  halloween.year
+getMonth = halloween.month
+getDay = halloween.day
+print(getYear, getMonth, getDay)
+
+print(halloween.isoformat())
+
+now = date.today()
+print("Today's date: ", now)
+print("Weekday: ",now.weekday())
 
 
+from datetime import timedelta
+from datetime import time
+
+next_day = timedelta(days=1)    #next_day object​
+tomorrow = now + next_day
+print("Tomorrow's date: ", tomorrow)
 
 
+print(calendar.day_name[now.weekday()])
 
+noon = time(3,23,3)
+print(noon, noon.hour, noon.minute, noon.second)
 
+from datetime import datetime
 
+currentTime = datetime.now()
+print(currentTime)
 
-# print("=====BANK ACCT PROMPT=====")
-# name = input("Enter Customer Name")
-# acct = input("Enter Acct Number")
-# sort_code = input("Enter Sort Code")
-# balance = float(input("Your balance"))
-# u2 = BankAccount(name, acct, sort_code, balance)
+import time
+
+now = time.time()
+print(now)  #return time in epoch value​
+time.ctime(now)
