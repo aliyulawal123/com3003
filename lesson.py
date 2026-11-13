@@ -907,129 +907,221 @@
 
 
 #=======WEEK 6 AFTERNOON SESSION
-print("Week 6 Afternoon")
+# print("Week 6 Afternoon")
 
-import random 
+# import random 
 
-mylist = ["banana", "orange", "apple"]
-print(random.choice(mylist))
+# mylist = ["banana", "orange", "apple"]
+# print(random.choice(mylist))
 
-from random import choice
+# from random import choice
 
-classics = [ "Pyramid", "Taj mahal", "China wall", "Colosseum", "Machu Picchu"]
+# classics = [ "Pyramid", "Taj mahal", "China wall", "Colosseum", "Machu Picchu"]
 
-print("Next year we are going to: ",choice(classics))
+# print("Next year we are going to: ",choice(classics))
 
-Car= ["Ford", "BMW", "Toyota", "Mercedes-Benz", "Audi", "Puegout", "VW"]
+# Car= ["Ford", "BMW", "Toyota", "Mercedes-Benz", "Audi", "Puegout", "VW"]
 
-def pick(): 
-    import random   
-    print("My favourite car brand: ", random.choice(Car))
+# def pick(): 
+#     import random   
+#     print("My favourite car brand: ", random.choice(Car))
 
-pick()
+# pick()
 
-print("Random float between two nums:", random.uniform(3,10))
-print("testing for randrange", random.randrange(0,100,25))
-print(random.sample([10, 20, 30, 40, 50,6,5,6], k=2))
-
-
-from random import choice
-
-places = [ "Abidjan", "Berlin", "Tokyo",    "Leeds", "Taipea", "Greenland"]
-def pickLocation():
-   return choice(places)
-
-import re
-
-word  = "Possibility"
-r = re.findall("s", word)
-print("Number of s in the word: ", word, r)
+# print("Random float between two nums:", random.uniform(3,10))
+# print("testing for randrange", random.randrange(0,100,25))
+# print(random.sample([10, 20, 30, 40, 50,6,5,6], k=2))
 
 
+# from random import choice
 
-str2 = "Hello #Raza!@#$%" 
-print(re.findall(r'\W', str2)) 
-print("How many non alpha-numeric cxts", len(re.findall(r'\W', str2)))
-# Output [' ', '#', '!', '@', '#', '$', '%']​
+# places = [ "Abidjan", "Berlin", "Tokyo",    "Leeds", "Taipea", "Greenland"]
+# def pickLocation():
+#    return choice(places)
 
-target_str = "My student number is 223455"
-res = re.findall(r"\d", target_str)   #(r"\d+", target_str)​
+# import re
 
-# extract matching value​
-
-print(res)
-
-str1 = "My name is jackson and my salary is 1000$"
-print("str1 length: ", len(str1))
-result = re.fullmatch(r".{41}", str1)
-# print entire match object​
-
-print(result)
-
-str1 = "Emma  was born on 12 25" 
-# Match any character ​
-print(re.match(r'.', str1)) # output 'E'
-
-target_string = "Kai is a baseball player born on June 17, 2003" 
-# Using search() ​
-
-result = re.search(r'\d{2}', target_string)
-print(result.group()) 
+# word  = "Possibility"
+# r = re.findall("s", word)
+# print("Number of s in the word: ", word, r)
 
 
-target_string = "The post code is LS18 5HD"
-res = re.split(r"\s", target_string)
-print("All tokens:", res)
-res = re.sub(r"\s", "-", target_string)
- # string after replacement: ​
-print(res) 
 
-import calendar
+# str2 = "Hello #Raza!@#$%" 
+# print(re.findall(r'\W', str2)) 
+# print("How many non alpha-numeric cxts", len(re.findall(r'\W', str2)))
+# # Output [' ', '#', '!', '@', '#', '$', '%']​
 
-print("This is a leap year: ", calendar.isleap(2024))
+# target_str = "My student number is 223455"
+# res = re.findall(r"\d", target_str)   #(r"\d+", target_str)​
 
-yy =  2026
-mm = 11
+# # extract matching value​
 
-print(calendar.month(yy, mm))
-print(calendar.calendar(2026))
+# print(res)
 
-from datetime import date
+# str1 = "My name is jackson and my salary is 1000$"
+# print("str1 length: ", len(str1))
+# result = re.fullmatch(r".{41}", str1)
+# # print entire match object​
 
-halloween = date(2026, 10, 31)
+# print(result)
 
-getYear =  halloween.year
-getMonth = halloween.month
-getDay = halloween.day
-print(getYear, getMonth, getDay)
+# str1 = "Emma  was born on 12 25" 
+# # Match any character ​
+# print(re.match(r'.', str1)) # output 'E'
 
-print(halloween.isoformat())
+# target_string = "Kai is a baseball player born on June 17, 2003" 
+# # Using search() ​
 
-now = date.today()
-print("Today's date: ", now)
-print("Weekday: ",now.weekday())
+# result = re.search(r'\d{2}', target_string)
+# print(result.group()) 
 
 
-from datetime import timedelta
-from datetime import time
+# target_string = "The post code is LS18 5HD"
+# res = re.split(r"\s", target_string)
+# print("All tokens:", res)
+# res = re.sub(r"\s", "-", target_string)
+#  # string after replacement: ​
+# print(res) 
 
-next_day = timedelta(days=1)    #next_day object​
-tomorrow = now + next_day
-print("Tomorrow's date: ", tomorrow)
+# import calendar
+
+# print("This is a leap year: ", calendar.isleap(2024))
+
+# yy =  2026
+# mm = 11
+
+# print(calendar.month(yy, mm))
+# print(calendar.calendar(2026))
+
+# from datetime import date
+
+# halloween = date(2026, 10, 31)
+
+# getYear =  halloween.year
+# getMonth = halloween.month
+# getDay = halloween.day
+# print(getYear, getMonth, getDay)
+
+# print(halloween.isoformat())
+
+# now = date.today()
+# print("Today's date: ", now)
+# print("Weekday: ",now.weekday())
 
 
-print(calendar.day_name[now.weekday()])
+# from datetime import timedelta
+# from datetime import time
 
-noon = time(3,23,3)
-print(noon, noon.hour, noon.minute, noon.second)
+# next_day = timedelta(days=1)    #next_day object​
+# tomorrow = now + next_day
+# print("Tomorrow's date: ", tomorrow)
 
-from datetime import datetime
 
-currentTime = datetime.now()
-print(currentTime)
+# print(calendar.day_name[now.weekday()])
 
-import time
+# noon = time(3,23,3)
+# print(noon, noon.hour, noon.minute, noon.second)
 
-now = time.time()
-print(now)  #return time in epoch value​
-time.ctime(now)
+# from datetime import datetime
+
+# currentTime = datetime.now()
+# print(currentTime)
+
+# import time
+
+# now = time.time()
+# print(now)  #return time in epoch value​
+# time.ctime(now)
+
+print("=====WEEK 7 MORNING SESSION TKINTER 1===")
+
+import tkinter
+
+window = tkinter.Tk()
+window.title("My First GUI programme")
+window.minsize(500,300)
+
+
+label = tkinter.Label(window, text="I am a Label",font=
+                      "Arial 24 bold", fg="blue", bg="white")
+label.pack()
+
+button = tkinter.Button(window, text="I am a button")
+button.config(bg="orange", fg="white")
+button.pack()
+
+myTestEntry = tkinter.Entry(window, width=30)
+myTestEntry.pack()
+
+checkButton = tkinter.Checkbutton(window, text="yes", bg="orange", fg="white", bd=1)
+checkButton.pack()
+
+optionList = ["UK", "JAPAN", "SINGAPORE", "MADAGASKAR"]
+tkvar = tkinter.StringVar(window)
+tkvar.set("Select a country")
+
+tkinter.OptionMenu(window, tkvar, *optionList).pack()
+
+radioButton1 = tkinter.Radiobutton(text="male", variable="house", value=1)
+radioButton1.pack()
+radioButton2 = tkinter.Radiobutton(text="female", variable="house", value=2)
+radioButton2.pack()
+
+scrollBar = tkinter.Scrollbar(orient=tkinter.VERTICAL, 
+                              command=tkinter.Scrollbar.set)
+scrollBar.pack()
+
+frame = tkinter.Frame(window)
+frame.pack()
+
+bottomframe = tkinter.Frame(window)
+bottomframe.pack( side = tkinter.BOTTOM )
+
+redbutton = tkinter.Button(frame, text="Red", fg="red")
+redbutton.pack( side = tkinter.LEFT)
+
+bluebutton = tkinter.Button(frame, text="Blue", fg="blue")
+bluebutton.pack( side = tkinter.RIGHT )
+blackbutton = tkinter.Button(bottomframe, text="Black", fg="black")
+blackbutton.pack( side = tkinter.BOTTOM)
+
+window.mainloop()
+
+
+import tkinter as tk
+
+root = tk.Tk()
+window_colour= "#0c998b"
+root.config(bg=window_colour)
+root.geometry('400x200')           
+root.resizable(10,10) 
+
+label = tk.Label(root, text="I am a label widget")
+button = tk.Button(root, text="I am a button")
+label.pack()
+button.pack()
+root.title("TextBox Input")     #title of the window​
+
+inputFrame = tkinter.LabelFrame(root,  bg=window_colour)
+inputFrame.pack()
+inputFrame.pack(pady=10)   #to add padding vertically​
+
+name =tkinter.Entry(inputFrame, text="Enter your",width=20).pack()
+
+def printInput():
+    print("Button Clicked")
+
+printButton =  tk.Button(text="Print", command=printInput)
+printButton.pack()
+
+frame = tk.Frame(root)
+tk.Label(frame, text="Pack Demo of side and fill").pack()
+
+tk.Button(frame, text="A").pack(side=tk.LEFT, fill=tk.Y)
+tk.Button(frame, text="B").pack(side=tk.TOP, fill=tk.X)
+tk.Button(frame, text="C").pack(side=tk.RIGHT,fill=tk.NONE)
+tk.Button(frame, text="D").pack(side=tk.TOP, fill=tk.BOTH)
+frame.pack()
+
+root.mainloop()
