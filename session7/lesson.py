@@ -1034,104 +1034,87 @@
 # print(now)  #return time in epoch value​
 # time.ctime(now)
 
-# print("=====WEEK 7 MORNING SESSION TKINTER 1===")
+print("=====WEEK 7 MORNING SESSION TKINTER 1===")
 
-# import tkinter
+import tkinter
 
-# window = tkinter.Tk()
-# window.title("My First GUI programme")
-# window.minsize(500,300)
-
-
-# label = tkinter.Label(window, text="I am a Label",font=
-#                       "Arial 24 bold", fg="blue", bg="white")
-# label.pack()
-
-# button = tkinter.Button(window, text="I am a button")
-# button.config(bg="orange", fg="white")
-# button.pack()
-
-# myTestEntry = tkinter.Entry(window, width=30)
-# myTestEntry.pack()
-
-# checkButton = tkinter.Checkbutton(window, text="yes", bg="orange", fg="white", bd=1)
-# checkButton.pack()
-
-# optionList = ["UK", "JAPAN", "SINGAPORE", "MADAGASKAR"]
-# tkvar = tkinter.StringVar(window)
-# tkvar.set("Select a country")
-
-# tkinter.OptionMenu(window, tkvar, *optionList).pack()
-
-# radioButton1 = tkinter.Radiobutton(text="male", variable="house", value=1)
-# radioButton1.pack()
-# radioButton2 = tkinter.Radiobutton(text="female", variable="house", value=2)
-# radioButton2.pack()
-
-# scrollBar = tkinter.Scrollbar(orient=tkinter.VERTICAL, 
-#                               command=tkinter.Scrollbar.set)
-# scrollBar.pack()
-
-# frame = tkinter.Frame(window)
-# frame.pack()
-
-# bottomframe = tkinter.Frame(window)
-# bottomframe.pack( side = tkinter.BOTTOM )
-
-# redbutton = tkinter.Button(frame, text="Red", fg="red")
-# redbutton.pack( side = tkinter.LEFT)
-
-# bluebutton = tkinter.Button(frame, text="Blue", fg="blue")
-# bluebutton.pack( side = tkinter.RIGHT )
-# blackbutton = tkinter.Button(bottomframe, text="Black", fg="black")
-# blackbutton.pack( side = tkinter.BOTTOM)
-
-# window.mainloop()
+window = tkinter.Tk()
+window.title("My First GUI programme")
+window.minsize(500,300)
 
 
-# import tkinter as tk
+label = tkinter.Label(window, text="I am a Label",font=
+                      "Arial 24 bold", fg="blue", bg="white")
+label.pack()
 
-# root = tk.Tk()
-# window_colour= "#0c998b"
-# root.config(bg=window_colour)
-# root.geometry('400x200')           
-# root.resizable(10,10) 
+button = tkinter.Button(window, text="I am a button")
+button.config(bg="orange", fg="white")
+button.pack()
 
-# label = tk.Label(root, text="I am a label widget")
-# button = tk.Button(root, text="I am a button")
-# label.pack()
-# button.pack()
-# root.title("TextBox Input")     #title of the window​
+myTestEntry = tkinter.Entry(window, width=30)
+myTestEntry.pack()
 
-# inputFrame = tkinter.LabelFrame(root,  bg=window_colour)
-# inputFrame.pack()
-# inputFrame.pack(pady=10)   #to add padding vertically​
+checkButton = tkinter.Checkbutton(window, text="yes", bg="orange", fg="white", bd=1)
+checkButton.pack()
 
-# name =tkinter.Entry(inputFrame, text="Enter your",width=20).pack()
+optionList = ["UK", "JAPAN", "SINGAPORE", "MADAGASKAR"]
+tkvar = tkinter.StringVar(window)
+tkvar.set("Select a country")
 
-# def printInput():
-#     print("Button Clicked")
+tkinter.OptionMenu(window, tkvar, *optionList).pack()
 
-# printButton =  tk.Button(text="Print", command=printInput)
-# printButton.pack()
+radioButton1 = tkinter.Radiobutton(text="male", variable="house", value=1)
+radioButton1.pack()
+radioButton2 = tkinter.Radiobutton(text="female", variable="house", value=2)
+radioButton2.pack()
 
-# frame = tk.Frame(root)
-# tk.Label(frame, text="Pack Demo of side and fill").pack()
+scrollBar = tkinter.Scrollbar(orient=tkinter.VERTICAL, 
+                              command=tkinter.Scrollbar.set)
+scrollBar.pack()
 
-# tk.Button(frame, text="A").pack(side=tk.LEFT, fill=tk.Y)
-# tk.Button(frame, text="B").pack(side=tk.TOP, fill=tk.X)
-# tk.Button(frame, text="C").pack(side=tk.RIGHT,fill=tk.NONE)
-# tk.Button(frame, text="D").pack(side=tk.TOP, fill=tk.BOTH)
-# frame.pack()
+frame = tkinter.Frame(window)
+frame.pack()
 
-# root.mainloop()
+bottomframe = tkinter.Frame(window)
+bottomframe.pack( side = tkinter.BOTTOM )
 
-print("===Session 7 Afternoon====")
+redbutton = tkinter.Button(frame, text="Red", fg="red")
+redbutton.pack( side = tkinter.LEFT)
+
+bluebutton = tkinter.Button(frame, text="Blue", fg="blue")
+bluebutton.pack( side = tkinter.RIGHT )
+blackbutton = tkinter.Button(bottomframe, text="Black", fg="black")
+blackbutton.pack( side = tkinter.BOTTOM)
+
+window.mainloop()
+
+
 import tkinter as tk
 
 root = tk.Tk()
+window_colour= "#0c998b"
+root.config(bg=window_colour)
 root.geometry('400x200')           
 root.resizable(10,10) 
+
+label = tk.Label(root, text="I am a label widget")
+button = tk.Button(root, text="I am a button")
+label.pack()
+button.pack()
+root.title("TextBox Input")     #title of the window​
+
+inputFrame = tkinter.LabelFrame(root,  bg=window_colour)
+inputFrame.pack()
+inputFrame.pack(pady=10)   #to add padding vertically​
+
+name =tkinter.Entry(inputFrame, text="Enter your",width=20).pack()
+
+def printInput():
+    print("Button Clicked")
+
+printButton =  tk.Button(text="Print", command=printInput)
+printButton.pack()
+
 frame = tk.Frame(root)
 tk.Label(frame, text="Pack Demo of side and fill").pack()
 
@@ -1141,72 +1124,5 @@ tk.Button(frame, text="C").pack(side=tk.RIGHT,fill=tk.NONE)
 tk.Button(frame, text="D").pack(side=tk.TOP, fill=tk.BOTH)
 frame.pack()
 
-tk.Label (text="Pack Demo of expand").pack()
-tk.Button(text="I do not expand").pack()
-tk.Button(text="I do not fill x but I expand").pack(expand = 1)
-
-tk.Button(text= "North").pack(anchor=tk.N) 
-tk.Button(text= "East").pack(anchor=tk.E) 
-tk.Button(text= "West").pack(anchor=tk.W) 
-tk.Button(text= "North East ").pack(anchor=tk.NE)
-tk.Button(text="South East").pack(anchor=tk.SE) 
-tk.Button(text= "North West").pack(anchor=tk.NW) 
-
-tk.Button(text= "South West").pack(anchor=tk.SW) 
-tk.Button(text= "South").pack( anchor=tk.S)
-
-window = tk.Frame(root)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-window.pack()
-
-Frame = tk.Frame(root)
-tk.Button(window, text='LEFT').pack(side=tk.LEFT)
-tk.Button(window, text='CENTER').pack(side=tk.LEFT)
-tk.Button(window, text='RIGHT').pack(side=tk.LEFT)
-
-frame.pack()
-
-window= tk.Tk()
-tk.Label(window, text="Username").grid(row=0, sticky=tk.W)
-tk.Label(window, text="Password").grid(row=1, sticky=tk.W)
-
-tk.Entry(window).grid(row=0, column=1, sticky=tk.E)
-tk.Entry(window).grid(row=1, column=1, sticky=tk.N)
-tk.Button(window, text="Login").grid(row=2, column=1, sticky=tk.E)
-
-
-parent = tk.Tk()
-parent.title('Find & Replace')
-tk.Label(parent, text="Find:").grid(row=0, column=0, sticky='e')
-tk.Entry(parent, width=60).grid(row=0, column=1, padx=2, pady=2, sticky='we', columnspan=9)
-
-tk.Label(parent, text = "Replace:").grid(row=1, column=0, sticky= tk.W)
-tk.Entry(parent, width=60).grid(row=1, column =1, padx=2, pady=2, sticky= tk.W , columnspan =9)
-
-tk.Button(parent, text="Find").grid( row=0, column=10, sticky='e' + 'w', padx=2, pady=2)
-tk.Button(parent, text="Find All").grid(row=1, column=10, sticky='e' + 'w', padx=2)
-
-tk.Button(parent, text="Replace").grid(row=2, column=10, sticky='e' + 'w', padx=2)
-tk.Button(parent, text="Replace All").grid(row=3, column=10, sticky='e' + 'w', padx=2)
-
-
-
-tk.Checkbutton(parent, text='Match whole word only').grid(row=2, column=1, columnspan=4, sticky='w')
-tk.Checkbutton(parent, text='Match Case').grid(row=3, column=1, columnspan=4, sticky='w')
-
-tk.Checkbutton(parent, text='Wrap around').grid(row=4, column=1, columnspan=4, sticky='w')
-
-tk.Label(parent, text="Direction:").grid(row=2, column=6, sticky='w')
-tk.Radiobutton(parent, text='Up', value=1).grid(row=3, column=6, columnspan=6, sticky='w')
-
-tk.Radiobutton(parent, text='Down', value=2).grid(row=3, column=7, columnspan=2, sticky='e')
-
-
-ps =tk.Tk()
-tk.Button(ps, text="Absolute Placement").place(x=20, y=10)
-# Relative positioning​
-tk.Button(ps, text="Relative").place(relx=0.8, rely=0.2, relwidth=0.5,  width=10,  anchor=tk.NE)
-
 root.mainloop()
+
