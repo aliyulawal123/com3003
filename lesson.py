@@ -1213,108 +1213,185 @@
 
 # root.mainloop()
 
-print("===WEEK 8 SESSION 1 MORNING===")
+# print("===WEEK 8 SESSION 1 MORNING===")
 
-import tkinter as tk
+# import tkinter as tk
 
-window = tk.Tk()
-window.geometry('400x200')           
-window.resizable(10,10) 
+# window = tk.Tk()
+# window.geometry('400x200')           
+# window.resizable(10,10) 
 
-tk.Label(window, text="FirstName").grid(row=0)
-tk.Label(window, text="LastName").grid(row=1)
+# tk.Label(window, text="FirstName").grid(row=0)
+# tk.Label(window, text="LastName").grid(row=1)
 
-e1 = tk.Entry(window)
-e2 = tk.Entry(window)
-e1.grid(row=0, column=1)
-e2.grid(row=1, column=1)
+# e1 = tk.Entry(window)
+# e2 = tk.Entry(window)
+# e1.grid(row=0, column=1)
+# e2.grid(row=1, column=1)
 
-e1.insert(0, "John")
-e2.insert(0, "Doe")
-#e1.get()
-
-
-def show_entry():
-    print("First Name:{} \n Last Name:{}".format(e1.get(), e2.get()))
-    #print("Last Name:{}".format(e2.get()))
-    tk.Label(window, text=e1.get() + "\n " + e2.get(), font="Century 15 bold").grid(row=3, column=3)
-
-Qbutton = tk.Button(window, text="Quit", command=window.quit)
-Qbutton.grid(row=2, column=0)
-
-Sbutton = tk.Button(window, text="Show", command=show_entry)
-Sbutton.grid(row=2, column=1, sticky=tk.W, pady=4)
-
-textbox = tk.Text(window, height=12, width=30)
-textbox.grid(row=5, column=1, sticky=tk.W, pady=4)
-
-password = tk.StringVar()
-passwordEntry = tk.Entry(window, textvariable=password, show="*")
-passwordEntry.grid(row=3, column=1, sticky=tk.W, pady=4)
-
-window.mainloop()
-
-import phonenumbers
-x = phonenumbers.parse("+442083661177", None)
-print(x)
-y = phonenumbers.parse("020 8366 1177", "GB")
-print(y)
-
-a = phonenumbers.is_valid_number(x)
-b=  phonenumbers.is_valid_number(y)
-print("Are these numbers valid:", a, b)
-c=phonenumbers.is_possible_number(x)
-print("Is this number possible:", c)
-
-x = "02083661177"
-print("National Format: ", x, phonenumbers.PhoneNumberFormat.NATIONAL)
-print("International Format: ", x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
-
-print("E164 Format: ", x, phonenumbers.PhoneNumberFormat.E164)
-
-from phonenumbers import geocoder, carrier, timezone
+# e1.insert(0, "John")
+# e2.insert(0, "Doe")
+# #e1.get()
 
 
-check_num = phonenumbers.parse("0431234567", "CH")
-print(geocoder.description_for_number(check_num, "de"))
+# def show_entry():
+#     print("First Name:{} \n Last Name:{}".format(e1.get(), e2.get()))
+#     #print("Last Name:{}".format(e2.get()))
+#     tk.Label(window, text=e1.get() + "\n " + e2.get(), font="Century 15 bold").grid(row=3, column=3)
 
-my_number = phonenumbers.parse("+40721234567", "RO")
-print(carrier.name_for_number(my_number, "en"))
+# Qbutton = tk.Button(window, text="Quit", command=window.quit)
+# Qbutton.grid(row=2, column=0)
 
-gb_number = phonenumbers.parse("+447986123456", "GB")
-print(timezone.time_zones_for_number(gb_number))
+# Sbutton = tk.Button(window, text="Show", command=show_entry)
+# Sbutton.grid(row=2, column=1, sticky=tk.W, pady=4)
 
-from phonenumbers import geocoder, carrier, timezone
+# textbox = tk.Text(window, height=12, width=30)
+# textbox.grid(row=5, column=1, sticky=tk.W, pady=4)
 
-root =tk.Tk()
-root.title("Phone Number Information")
-root.geometry('400x200')           
-root.resizable(10,10) 
+# password = tk.StringVar()
+# passwordEntry = tk.Entry(window, textvariable=password, show="*")
+# passwordEntry.grid(row=3, column=1, sticky=tk.W, pady=4)
 
-def printInfo():
-  number=phonenumbers.parse(entry1.get())
-  Carrier = carrier.name_for_number(number, 'en')
-  location = geocoder.description_for_number(number, 'en')
-  Timezone = timezone.time_zones_for_number(number)
-  x = phonenumbers.is_valid_number(number)
-  label2 = tk.Label(root, bg='#2a9d8f', text=number)
-  label2.grid(row=3, column =1, sticky= tk.W)
+# window.mainloop()
 
-  label3 = tk.Label(root, bg='#2a9d8f', text="The Network is : " + Carrier)
-  label3.grid(row=4, column=1, sticky= tk.W)
+# import phonenumbers
+# x = phonenumbers.parse("+442083661177", None)
+# print(x)
+# y = phonenumbers.parse("020 8366 1177", "GB")
+# print(y)
 
-  label4 = tk.Label(root, bg='#2a9d8f', text="The location of the number is - " + location)
-  label4.grid(row=5, column=1, sticky= tk.W)
+# a = phonenumbers.is_valid_number(x)
+# b=  phonenumbers.is_valid_number(y)
+# print("Are these numbers valid:", a, b)
+# c=phonenumbers.is_possible_number(x)
+# print("Is this number possible:", c)
 
-  label5 = tk.Label(root, bg='#2a9d8f', text= Timezone)
-  label5.grid(row=6, column=1, sticky= tk.W)
+# x = "02083661177"
+# print("National Format: ", x, phonenumbers.PhoneNumberFormat.NATIONAL)
+# print("International Format: ", x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
 
-  label6 = tk.Label(root, bg='#2a9d8f', text=("Is the number valid?",x))
-  label6.grid(row=7, column=1, sticky= tk.W)
+# print("E164 Format: ", x, phonenumbers.PhoneNumberFormat.E164)
 
-entry1=tk.Entry(root, width=15  )
-entry1.grid(row=0,column=1,sticky=tk.W,pady=20,padx=24)
-button1=tk.Button(root,text="submit",command=printInfo)
-button1.grid(row=0,column=2, sticky=tk.E)
+# from phonenumbers import geocoder, carrier, timezone
 
-root.mainloop()
+
+# check_num = phonenumbers.parse("0431234567", "CH")
+# print(geocoder.description_for_number(check_num, "de"))
+
+# my_number = phonenumbers.parse("+40721234567", "RO")
+# print(carrier.name_for_number(my_number, "en"))
+
+# gb_number = phonenumbers.parse("+447986123456", "GB")
+# print(timezone.time_zones_for_number(gb_number))
+
+# from phonenumbers import geocoder, carrier, timezone
+
+# root =tk.Tk()
+# root.title("Phone Number Information")
+# root.geometry('400x200')           
+# root.resizable(10,10) 
+
+# def printInfo():
+#   number=phonenumbers.parse(entry1.get())
+#   Carrier = carrier.name_for_number(number, 'en')
+#   location = geocoder.description_for_number(number, 'en')
+#   Timezone = timezone.time_zones_for_number(number)
+#   x = phonenumbers.is_valid_number(number)
+#   label2 = tk.Label(root, bg='#2a9d8f', text=number)
+#   label2.grid(row=3, column =1, sticky= tk.W)
+
+#   label3 = tk.Label(root, bg='#2a9d8f', text="The Network is : " + Carrier)
+#   label3.grid(row=4, column=1, sticky= tk.W)
+
+#   label4 = tk.Label(root, bg='#2a9d8f', text="The location of the number is - " + location)
+#   label4.grid(row=5, column=1, sticky= tk.W)
+
+#   label5 = tk.Label(root, bg='#2a9d8f', text= Timezone)
+#   label5.grid(row=6, column=1, sticky= tk.W)
+
+#   label6 = tk.Label(root, bg='#2a9d8f', text=("Is the number valid?",x))
+#   label6.grid(row=7, column=1, sticky= tk.W)
+
+# entry1=tk.Entry(root, width=15  )
+# entry1.grid(row=0,column=1,sticky=tk.W,pady=20,padx=24)
+# button1=tk.Button(root,text="submit",command=printInfo)
+# button1.grid(row=0,column=2, sticky=tk.E)
+
+# root.mainloop()
+
+print("===WEEK 8 SESSION 2 AFTERNOON===")
+
+# class Product(object):
+
+#     def __init__(self, brand, price):
+#         self.brand = brand
+#         self.price = price
+
+# p= Product("Apple", 1000)
+# print(p.brand, p.price, p.discount) #attribute error because discount is not defined in the class
+
+# x = [1,2,3] #index error
+# print("Accessing index 5:", x[5])
+
+# fp = open("test.txt", "r")
+# if fp: #file not found error
+#     print("file is opened successfully")
+
+# x = 1 
+# y = 0 
+
+# assert(y != 0, "Invalid, denominator cannot be zero")
+# print(x / y)
+
+number = 3
+if number < 0:
+    
+    raise ValueError("Invalid number, cannot be negative")
+
+try:
+    a = 3
+    b = 0
+    c = a / b
+    print("The result is:", c)
+except:
+    print("Error: Division by zero is not allowed.")
+
+def divide(x, y):
+    try:
+        result = x // y
+        print("Yeah! Your answer is :", result)
+
+    except ZeroDivisionError:
+        print("Sorry ! You are dividing by zero ")
+
+divide(7, 0)
+
+
+# try:
+#     a = int(input("Enter value of a:"))
+#     b = int(input("Enter value of b:"))
+#     c = a/b
+
+#     print("The answer of a divide by b:", c)
+
+# except (ValueError, ZeroDivisionError):
+#     print("Please enter a valid value")
+
+
+try:
+    a = 10/0
+    print(a)
+except ArithmeticError:
+     print("This statement is raising an arithmetic exception.")
+else:
+    print("Success.")
+
+try:
+    a = int(input("Enter value of a:"))
+    b = int(input("Enter value of b:"))
+    c = a/b
+    print("The answer of a divide by b:", c)
+except ValueError:
+    print("Please enter an integer value")
+except ZeroDivisionError:
+    print("Can't divide by zero")
