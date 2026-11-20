@@ -1,3 +1,4 @@
+
 # print("hello world")
 
 # x = 32
@@ -1126,87 +1127,194 @@
 
 # root.mainloop()
 
-print("===Session 7 Afternoon====")
+# print("===Session 7 Afternoon====")
+# import tkinter as tk
+
+# root = tk.Tk()
+# root.geometry('400x200')           
+# root.resizable(10,10) 
+# frame = tk.Frame(root)
+# tk.Label(frame, text="Pack Demo of side and fill").pack()
+
+# tk.Button(frame, text="A").pack(side=tk.LEFT, fill=tk.Y)
+# tk.Button(frame, text="B").pack(side=tk.TOP, fill=tk.X)
+# tk.Button(frame, text="C").pack(side=tk.RIGHT,fill=tk.NONE)
+# tk.Button(frame, text="D").pack(side=tk.TOP, fill=tk.BOTH)
+# frame.pack()
+
+# tk.Label (text="Pack Demo of expand").pack()
+# tk.Button(text="I do not expand").pack()
+# tk.Button(text="I do not fill x but I expand").pack(expand = 1)
+
+# tk.Button(text= "North").pack(anchor=tk.N) 
+# tk.Button(text= "East").pack(anchor=tk.E) 
+# tk.Button(text= "West").pack(anchor=tk.W) 
+# tk.Button(text= "North East ").pack(anchor=tk.NE)
+# tk.Button(text="South East").pack(anchor=tk.SE) 
+# tk.Button(text= "North West").pack(anchor=tk.NW)
+
+
+# tk.Button(text= "South West").pack(anchor=tk.SW) 
+# tk.Button(text= "South").pack( anchor=tk.S)
+
+# window = tk.Frame(root)
+# tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
+# tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
+# tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
+# window.pack()
+
+# Frame = tk.Frame(root)
+# tk.Button(window, text='LEFT').pack(side=tk.LEFT)
+# tk.Button(window, text='CENTER').pack(side=tk.LEFT)
+# tk.Button(window, text='RIGHT').pack(side=tk.LEFT)
+
+# frame.pack()
+
+# window= tk.Tk()
+# tk.Label(window, text="Username").grid(row=0, sticky=tk.W)
+# tk.Label(window, text="Password").grid(row=1, sticky=tk.W)
+
+# tk.Entry(window).grid(row=0, column=1, sticky=tk.E)
+# tk.Entry(window).grid(row=1, column=1, sticky=tk.N)
+# tk.Button(window, text="Login").grid(row=2, column=1, sticky=tk.E)
+
+
+# parent = tk.Tk()
+# parent.title('Find & Replace')
+# tk.Label(parent, text="Find:").grid(row=0, column=0, sticky='e')
+# tk.Entry(parent, width=60).grid(row=0, column=1, padx=2, pady=2, sticky='we', columnspan=9)
+
+# tk.Label(parent, text = "Replace:").grid(row=1, column=0, sticky= tk.W)
+# tk.Entry(parent, width=60).grid(row=1, column =1, padx=2, pady=2, sticky= tk.W , columnspan =9)
+
+# tk.Button(parent, text="Find").grid( row=0, column=10, sticky='e' + 'w', padx=2, pady=2)
+# tk.Button(parent, text="Find All").grid(row=1, column=10, sticky='e' + 'w', padx=2)
+
+# tk.Button(parent, text="Replace").grid(row=2, column=10, sticky='e' + 'w', padx=2)
+# tk.Button(parent, text="Replace All").grid(row=3, column=10, sticky='e' + 'w', padx=2)
+
+
+
+# tk.Checkbutton(parent, text='Match whole word only').grid(row=2, column=1, columnspan=4, sticky='w')
+# tk.Checkbutton(parent, text='Match Case').grid(row=3, column=1, columnspan=4, sticky='w')
+
+# tk.Checkbutton(parent, text='Wrap around').grid(row=4, column=1, columnspan=4, sticky='w')
+
+# tk.Label(parent, text="Direction:").grid(row=2, column=6, sticky='w')
+# tk.Radiobutton(parent, text='Up', value=1).grid(row=3, column=6, columnspan=6, sticky='w')
+
+# tk.Radiobutton(parent, text='Down', value=2).grid(row=3, column=7, columnspan=2, sticky='e')
+
+
+# ps =tk.Tk()
+# tk.Button(ps, text="Absolute Placement").place(x=20, y=10)
+# # Relative positioning​
+# tk.Button(ps, text="Relative").place(relx=0.8, rely=0.2, relwidth=0.5,  width=10,  anchor=tk.NE)
+
+# root.mainloop()
+
+print("===WEEK 8 SESSION 1 MORNING===")
+
 import tkinter as tk
 
-root = tk.Tk()
+window = tk.Tk()
+window.geometry('400x200')           
+window.resizable(10,10) 
+
+tk.Label(window, text="FirstName").grid(row=0)
+tk.Label(window, text="LastName").grid(row=1)
+
+e1 = tk.Entry(window)
+e2 = tk.Entry(window)
+e1.grid(row=0, column=1)
+e2.grid(row=1, column=1)
+
+e1.insert(0, "John")
+e2.insert(0, "Doe")
+#e1.get()
+
+
+def show_entry():
+    print("First Name:{} \n Last Name:{}".format(e1.get(), e2.get()))
+    #print("Last Name:{}".format(e2.get()))
+    tk.Label(window, text=e1.get() + "\n " + e2.get(), font="Century 15 bold").grid(row=3, column=3)
+
+Qbutton = tk.Button(window, text="Quit", command=window.quit)
+Qbutton.grid(row=2, column=0)
+
+Sbutton = tk.Button(window, text="Show", command=show_entry)
+Sbutton.grid(row=2, column=1, sticky=tk.W, pady=4)
+
+textbox = tk.Text(window, height=12, width=30)
+textbox.grid(row=5, column=1, sticky=tk.W, pady=4)
+
+password = tk.StringVar()
+passwordEntry = tk.Entry(window, textvariable=password, show="*")
+passwordEntry.grid(row=3, column=1, sticky=tk.W, pady=4)
+
+window.mainloop()
+
+import phonenumbers
+x = phonenumbers.parse("+442083661177", None)
+print(x)
+y = phonenumbers.parse("020 8366 1177", "GB")
+print(y)
+
+a = phonenumbers.is_valid_number(x)
+b=  phonenumbers.is_valid_number(y)
+print("Are these numbers valid:", a, b)
+c=phonenumbers.is_possible_number(x)
+print("Is this number possible:", c)
+
+x = "02083661177"
+print("National Format: ", x, phonenumbers.PhoneNumberFormat.NATIONAL)
+print("International Format: ", x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+
+print("E164 Format: ", x, phonenumbers.PhoneNumberFormat.E164)
+
+from phonenumbers import geocoder, carrier, timezone
+
+
+check_num = phonenumbers.parse("0431234567", "CH")
+print(geocoder.description_for_number(check_num, "de"))
+
+my_number = phonenumbers.parse("+40721234567", "RO")
+print(carrier.name_for_number(my_number, "en"))
+
+gb_number = phonenumbers.parse("+447986123456", "GB")
+print(timezone.time_zones_for_number(gb_number))
+
+from phonenumbers import geocoder, carrier, timezone
+
+root =tk.Tk()
+root.title("Phone Number Information")
 root.geometry('400x200')           
 root.resizable(10,10) 
-frame = tk.Frame(root)
-tk.Label(frame, text="Pack Demo of side and fill").pack()
 
-tk.Button(frame, text="A").pack(side=tk.LEFT, fill=tk.Y)
-tk.Button(frame, text="B").pack(side=tk.TOP, fill=tk.X)
-tk.Button(frame, text="C").pack(side=tk.RIGHT,fill=tk.NONE)
-tk.Button(frame, text="D").pack(side=tk.TOP, fill=tk.BOTH)
-frame.pack()
+def printInfo():
+  number=phonenumbers.parse(entry1.get())
+  Carrier = carrier.name_for_number(number, 'en')
+  location = geocoder.description_for_number(number, 'en')
+  Timezone = timezone.time_zones_for_number(number)
+  x = phonenumbers.is_valid_number(number)
+  label2 = tk.Label(root, bg='#2a9d8f', text=number)
+  label2.grid(row=3, column =1, sticky= tk.W)
 
-tk.Label (text="Pack Demo of expand").pack()
-tk.Button(text="I do not expand").pack()
-tk.Button(text="I do not fill x but I expand").pack(expand = 1)
+  label3 = tk.Label(root, bg='#2a9d8f', text="The Network is : " + Carrier)
+  label3.grid(row=4, column=1, sticky= tk.W)
 
-tk.Button(text= "North").pack(anchor=tk.N) 
-tk.Button(text= "East").pack(anchor=tk.E) 
-tk.Button(text= "West").pack(anchor=tk.W) 
-tk.Button(text= "North East ").pack(anchor=tk.NE)
-tk.Button(text="South East").pack(anchor=tk.SE) 
-tk.Button(text= "North West").pack(anchor=tk.NW) 
+  label4 = tk.Label(root, bg='#2a9d8f', text="The location of the number is - " + location)
+  label4.grid(row=5, column=1, sticky= tk.W)
 
-tk.Button(text= "South West").pack(anchor=tk.SW) 
-tk.Button(text= "South").pack( anchor=tk.S)
+  label5 = tk.Label(root, bg='#2a9d8f', text= Timezone)
+  label5.grid(row=6, column=1, sticky= tk.W)
 
-window = tk.Frame(root)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-tk.Button(window, text='Occupy X axis').pack(fill=tk.X)
-window.pack()
+  label6 = tk.Label(root, bg='#2a9d8f', text=("Is the number valid?",x))
+  label6.grid(row=7, column=1, sticky= tk.W)
 
-Frame = tk.Frame(root)
-tk.Button(window, text='LEFT').pack(side=tk.LEFT)
-tk.Button(window, text='CENTER').pack(side=tk.LEFT)
-tk.Button(window, text='RIGHT').pack(side=tk.LEFT)
-
-frame.pack()
-
-window= tk.Tk()
-tk.Label(window, text="Username").grid(row=0, sticky=tk.W)
-tk.Label(window, text="Password").grid(row=1, sticky=tk.W)
-
-tk.Entry(window).grid(row=0, column=1, sticky=tk.E)
-tk.Entry(window).grid(row=1, column=1, sticky=tk.N)
-tk.Button(window, text="Login").grid(row=2, column=1, sticky=tk.E)
-
-
-parent = tk.Tk()
-parent.title('Find & Replace')
-tk.Label(parent, text="Find:").grid(row=0, column=0, sticky='e')
-tk.Entry(parent, width=60).grid(row=0, column=1, padx=2, pady=2, sticky='we', columnspan=9)
-
-tk.Label(parent, text = "Replace:").grid(row=1, column=0, sticky= tk.W)
-tk.Entry(parent, width=60).grid(row=1, column =1, padx=2, pady=2, sticky= tk.W , columnspan =9)
-
-tk.Button(parent, text="Find").grid( row=0, column=10, sticky='e' + 'w', padx=2, pady=2)
-tk.Button(parent, text="Find All").grid(row=1, column=10, sticky='e' + 'w', padx=2)
-
-tk.Button(parent, text="Replace").grid(row=2, column=10, sticky='e' + 'w', padx=2)
-tk.Button(parent, text="Replace All").grid(row=3, column=10, sticky='e' + 'w', padx=2)
-
-
-
-tk.Checkbutton(parent, text='Match whole word only').grid(row=2, column=1, columnspan=4, sticky='w')
-tk.Checkbutton(parent, text='Match Case').grid(row=3, column=1, columnspan=4, sticky='w')
-
-tk.Checkbutton(parent, text='Wrap around').grid(row=4, column=1, columnspan=4, sticky='w')
-
-tk.Label(parent, text="Direction:").grid(row=2, column=6, sticky='w')
-tk.Radiobutton(parent, text='Up', value=1).grid(row=3, column=6, columnspan=6, sticky='w')
-
-tk.Radiobutton(parent, text='Down', value=2).grid(row=3, column=7, columnspan=2, sticky='e')
-
-
-ps =tk.Tk()
-tk.Button(ps, text="Absolute Placement").place(x=20, y=10)
-# Relative positioning​
-tk.Button(ps, text="Relative").place(relx=0.8, rely=0.2, relwidth=0.5,  width=10,  anchor=tk.NE)
+entry1=tk.Entry(root, width=15  )
+entry1.grid(row=0,column=1,sticky=tk.W,pady=20,padx=24)
+button1=tk.Button(root,text="submit",command=printInfo)
+button1.grid(row=0,column=2, sticky=tk.E)
 
 root.mainloop()
