@@ -1386,12 +1386,68 @@ except ArithmeticError:
 else:
     print("Success.")
 
+# try:
+#     a = int(input("Enter value of a:"))
+#     b = int(input("Enter value of b:"))
+#     c = a/b
+#     print("The answer of a divide by b:", c)
+# except ValueError:
+#     print("Please enter an integer value")
+# except ZeroDivisionError:
+#     print("Can't divide by zero")
+a = [1, 2, 3]
+
+try:
+    print("First element = %d" %(a[0]))
+    print("Second element = %d" %(a[1]))
+    # Throws error since there are only 3 elements in array​
+    print("Fourth element = %d" %(a[3]))
+except IndexError:
+    print("Error: Index out of bounds")
+
+file = None
+try:
+    file = open("file.txt", "r")
+    data = file.read()
+    print(data)
+except FileNotFoundError: 
+    print("File not found")
+finally:
+    if file is not None:
+      file.close()
+
 try:
     a = int(input("Enter value of a:"))
     b = int(input("Enter value of b:"))
-    c = a/b
+    c = a / b
     print("The answer of a divide by b:", c)
-except ValueError:
-    print("Please enter an integer value")
+except ZeroDivisionError:
+    print("Can't divide with zero")
+finally:
+    print("Inside a finally block")
+
+
+try:
+    k = 5//0 # raises divide by zero exception.​
+    print(k)
+
+# handles zerodivision exception​
+
 except ZeroDivisionError:
     print("Can't divide by zero")
+finally:
+    # this block is always executed​
+
+    # regardless of exception generation.​
+
+    print('This is always executed')
+
+try:
+    a = int(input("Enter value of a:"))
+    b = int(input("Enter value of b:"))
+    c = a / b
+    print("a/b = %d" % c)
+except ZeroDivisionError:
+    print("Can't divide by zero")
+else:
+    print("We are in else block ")
