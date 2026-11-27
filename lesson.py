@@ -1319,7 +1319,7 @@
 
 # root.mainloop()
 
-print("===WEEK 8 SESSION 2 AFTERNOON===")
+# print("===WEEK 8 SESSION 2 AFTERNOON===")
 
 # class Product(object):
 
@@ -1343,111 +1343,200 @@ print("===WEEK 8 SESSION 2 AFTERNOON===")
 # assert(y != 0, "Invalid, denominator cannot be zero")
 # print(x / y)
 
-number = 3
-if number < 0:
+# number = 3
+# if number < 0:
     
-    raise ValueError("Invalid number, cannot be negative")
+#     raise ValueError("Invalid number, cannot be negative")
 
-try:
-    a = 3
-    b = 0
-    c = a / b
-    print("The result is:", c)
-except:
-    print("Error: Division by zero is not allowed.")
+# try:
+#     a = 3
+#     b = 0
+#     c = a / b
+#     print("The result is:", c)
+# except:
+#     print("Error: Division by zero is not allowed.")
 
-def divide(x, y):
-    try:
-        result = x // y
-        print("Yeah! Your answer is :", result)
+# def divide(x, y):
+#     try:
+#         result = x // y
+#         print("Yeah! Your answer is :", result)
 
-    except ZeroDivisionError:
-        print("Sorry ! You are dividing by zero ")
+#     except ZeroDivisionError:
+#         print("Sorry ! You are dividing by zero ")
 
-divide(7, 0)
+# divide(7, 0)
 
+
+# # try:
+# #     a = int(input("Enter value of a:"))
+# #     b = int(input("Enter value of b:"))
+# #     c = a/b
+
+# #     print("The answer of a divide by b:", c)
+
+# # except (ValueError, ZeroDivisionError):
+# #     print("Please enter a valid value")
+
+
+# try:
+#     a = 10/0
+#     print(a)
+# except ArithmeticError:
+#      print("This statement is raising an arithmetic exception.")
+# else:
+#     print("Success.")
+
+# # try:
+# #     a = int(input("Enter value of a:"))
+# #     b = int(input("Enter value of b:"))
+# #     c = a/b
+# #     print("The answer of a divide by b:", c)
+# # except ValueError:
+# #     print("Please enter an integer value")
+# # except ZeroDivisionError:
+# #     print("Can't divide by zero")
+# a = [1, 2, 3]
+
+# try:
+#     print("First element = %d" %(a[0]))
+#     print("Second element = %d" %(a[1]))
+#     # Throws error since there are only 3 elements in array​
+#     print("Fourth element = %d" %(a[3]))
+# except IndexError:
+#     print("Error: Index out of bounds")
+
+# file = None
+# try:
+#     file = open("file.txt", "r")
+#     data = file.read()
+#     print(data)
+# except FileNotFoundError: 
+#     print("File not found")
+# finally:
+#     if file is not None:
+#       file.close()
 
 # try:
 #     a = int(input("Enter value of a:"))
 #     b = int(input("Enter value of b:"))
-#     c = a/b
-
+#     c = a / b
 #     print("The answer of a divide by b:", c)
+# except ZeroDivisionError:
+#     print("Can't divide with zero")
+# finally:
+#     print("Inside a finally block")
 
-# except (ValueError, ZeroDivisionError):
-#     print("Please enter a valid value")
-
-
-try:
-    a = 10/0
-    print(a)
-except ArithmeticError:
-     print("This statement is raising an arithmetic exception.")
-else:
-    print("Success.")
 
 # try:
-#     a = int(input("Enter value of a:"))
-#     b = int(input("Enter value of b:"))
-#     c = a/b
-#     print("The answer of a divide by b:", c)
-# except ValueError:
-#     print("Please enter an integer value")
+#     k = 5//0 # raises divide by zero exception.​
+#     print(k)
+
+# # handles zerodivision exception​
+
 # except ZeroDivisionError:
 #     print("Can't divide by zero")
-a = [1, 2, 3]
+# finally:
+#     # this block is always executed​
 
-try:
-    print("First element = %d" %(a[0]))
-    print("Second element = %d" %(a[1]))
-    # Throws error since there are only 3 elements in array​
-    print("Fourth element = %d" %(a[3]))
-except IndexError:
-    print("Error: Index out of bounds")
+#     # regardless of exception generation.​
 
-file = None
-try:
-    file = open("file.txt", "r")
-    data = file.read()
-    print(data)
-except FileNotFoundError: 
-    print("File not found")
-finally:
-    if file is not None:
-      file.close()
+#     print('This is always executed')
 
-try:
-    a = int(input("Enter value of a:"))
-    b = int(input("Enter value of b:"))
-    c = a / b
-    print("The answer of a divide by b:", c)
-except ZeroDivisionError:
-    print("Can't divide with zero")
-finally:
-    print("Inside a finally block")
+# try:
+#     a = int(input("Enter value of a:"))
+#     b = int(input("Enter value of b:"))
+#     c = a / b
+#     print("a/b = %d" % c)
+# except ZeroDivisionError:
+#     print("Can't divide by zero")
+# else:
+#     print("We are in else block ")
+
+print("===WEEK 9 SESSION 1 MORNING===")
+
+import requests
+import json
+
+response = requests.get("http://api.open-notify.org/iss-now.json")
+print("Response Status Code:", response.status_code)
+print("Structured Response JSON:", response.json())
+#print("Raw Response Text:", response.text)
+
+from datetime import datetime
+time=datetime.fromtimestamp(1795777139)
+print("The time the ISS rover  is moving at:", time)
+
+response1 = requests.get("http://api.open-notify.org/fake-api")
+print("Unknown resource")
+print("Response Status Code:", response1.status_code)
+
+print("===ASTROS IN SPACE===")
+
+def jprint_json(json_data):
+    print(json.dumps(json_data, indent=4, sort_keys=True))
+
+response3 = requests.get("http://api.open-notify.org/astros.json")
+print("Response Status Code:", response3.status_code)
+print("Structured Response JSON:", response3.json())
+print("Structured Response JSON Pretty Print:")
+jprint_json(response3.json())
+#print("Raw Response Text:", response3.text)
 
 
-try:
-    k = 5//0 # raises divide by zero exception.​
-    print(k)
 
-# handles zerodivision exception​
 
-except ZeroDivisionError:
-    print("Can't divide by zero")
-finally:
-    # this block is always executed​
 
-    # regardless of exception generation.​
 
-    print('This is always executed')
 
-try:
-    a = int(input("Enter value of a:"))
-    b = int(input("Enter value of b:"))
-    c = a / b
-    print("a/b = %d" % c)
-except ZeroDivisionError:
-    print("Can't divide by zero")
-else:
-    print("We are in else block ")
+print("===GET POST PUT PATCH DELETE===")
+# print("===BITCOIN COIN===")
+# bitcoin_api_url =  "https://pro-api.coinmarketcap.com/public-api/v2/simple/price?symbol=BTC,ETH&convert=USD"
+# response2 = requests.get(bitcoin_api_url)
+# print("Response Status Code:", response2.status_code)
+# print("Structured Response JSON:", response2.json())
+
+api_url = "https://jsonplaceholder.typicode.com/todos/1"
+response4 = requests.get(api_url)
+print("Response Status Code:", response4.status_code)
+print(" GET Structured Response JSON:", response4.json())
+
+postData = {"userId": 1,"title": "Buy milk","completed": False}
+response5 = requests.post("https://jsonplaceholder.typicode.com/todos", json=postData)
+print("Response Status Code:", response5.status_code)
+print(" POST Structured Response JSON:", response5.json())
+
+
+response6 = requests.get("https://jsonplaceholder.typicode.com/todos/10")
+print("Response Status Code:", response6.status_code)   
+print(" GET  Structured Response JSON:", response6.json())
+
+updateData = {"userId": 1,"title": "Car wash","completed": True}
+response7 = requests.put("https://jsonplaceholder.typicode.com/todos/10", json=updateData)
+print("Response Status Code:", response7.status_code)   
+print(" PUT Structured Response JSON:", response7.json())
+
+
+patchData = {"title": "Cleaning and polishing"}
+response8 = requests.patch("https://jsonplaceholder.typicode.com/todos/10", json=patchData)
+print("Response Status Code:", response8.status_code)
+print(" PATCH Structured Response JSON:", response8.json())
+
+#delete sample
+
+response9 = requests.delete("https://jsonplaceholder.typicode.com/todos/10")
+print("Response Status Code:", response9.status_code)   
+print(" DELETE Structured Response JSON:", response9.json())
+
+NASA_API_KEY = "CP6DCLdknH9LTCbCh6PpJ8TcBNbpHHKBmk6pMbMk"
+
+donki_api_url = "http://api.nasa.gov/DONKI/CMEAnalysis?startDate=2016-09-01&endDate=2016-09-30&mostAccurateOnly=true&speed=500&halfAngle=30&catalog=ALL&api_key=CP6DCLdknH9LTCbCh6PpJ8TcBNbpHHKBmk6pMbMk"
+response10 = requests.get(donki_api_url)
+print("Response Status Code:", response10.status_code)
+print("Structured Response JSON:", response10.json())
+jprint_json(response10.json())
+
+gms = "https://api.nasa.gov/DONKI/GST?startDate=2016-01-01&endDate=2016-01-30&api_key=CP6DCLdknH9LTCbCh6PpJ8TcBNbpHHKBmk6pMbMk"
+response11 = requests.get(gms)
+print("Response Status Code:", response11.status_code)
+print("Structured Response JSON:", response11.json())
+jprint_json(response11.json())
